@@ -1,9 +1,5 @@
-/* ============================================================
-   GARABI FILMS — home.css
-   Estilos específicos de la portada (index.html)
-   ============================================================ */
-
-/* ── HERO ─────────────────────────────────────────────────── */
+/* GARABI FILMS — home.css
+   Estilos de portada (index.html) */
 .hero {
   position: relative;
   width: 100%;
@@ -35,11 +31,10 @@
   to   { transform: scale(1.04);  }
 }
 
-/* Placeholder de color mientras no hay imagen */
+
 .hero__fondo-placeholder {
   width: 100%;
   height: 100%;
-  /* Textura de cuadrícula fina sobre fondo muy oscuro */
   background-color: #0d0d12;
   background-image:
     linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
@@ -47,7 +42,7 @@
   background-size: 48px 48px;
 }
 
-/* Gradiente oscuro que va de transparente arriba a negro abajo */
+
 .hero__gradiente {
   position: absolute;
   inset: 0;
@@ -62,7 +57,6 @@
     );
 }
 
-/* Contenido encima del hero */
 .hero__contenido {
   position: relative;
   z-index: 2;
@@ -125,7 +119,6 @@
   color: rgba(245, 243, 239, 0.8);
 }
 
-/* Línea separadora */
 .hero__separador {
   width: 40px;
   height: 1px;
@@ -199,7 +192,6 @@
   transform: translateX(5px);
 }
 
-/* Indicador de scroll */
 .hero__scroll-indicador {
   position: absolute;
   bottom: 2.5rem;
@@ -247,7 +239,7 @@
   text-orientation: mixed;
 }
 
-/* ── SECCIÓN: Últimas producciones ───────────────────────── */
+/* Sección: Últimas producciones  */
 .ultimas {
   padding: var(--gap-xl) 0;
   background: var(--negro);
@@ -288,7 +280,7 @@
   gap: var(--gap-md);
 }
 
-/* ── Card de película ─────────────────────────────────────── */
+/* Card de película  */
 .pelicula-card {
   position: relative;
 }
@@ -301,7 +293,7 @@
 
 .pelicula-card__imagen-wrap {
   position: relative;
-  aspect-ratio: 2 / 3;    /* Proporción de póster de cine */
+  aspect-ratio: 2 / 3;
   overflow: hidden;
   border-radius: 2px;
   margin-bottom: var(--gap-sm);
@@ -370,7 +362,7 @@
   letter-spacing: 0.04em;
 }
 
-/* ── Menú móvil: botón cerrar ─────────────────────────────── */
+/* Menú móvil: botón cerrar */
 .menu-movil__cerrar {
   position: absolute;
   top: 1.5rem;
@@ -388,7 +380,7 @@
   color: var(--blanco);
 }
 
-/* ── Responsive ───────────────────────────────────────────── */
+/* Responsive */
 @media (max-width: 900px) {
   .ultimas__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -418,6 +410,6 @@
   }
 
   .hero__festivales {
-    display: none;  /* En móvil muy pequeño se ocultan los festivales */
+    display: none;
   }
 }

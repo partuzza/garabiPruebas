@@ -1,12 +1,10 @@
-/* ============================================================
-   GARABI FILMS — style.css
-   Estilos globales: variables, reset, navbar, footer
-   ============================================================ */
+/* GARABI FILMS — style.css
+   Estilos globales: variables, reset, navbar, footer */
 
-/* ── Google Fonts ─────────────────────────────────────────── */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
 
-/* ── Variables ────────────────────────────────────────────── */
+/* Variables */
 :root {
   /* Colores principales */
   --negro:       #080808;
@@ -15,7 +13,7 @@
   --gris-medio:  #3a3a3a;
   --gris-borde:  #2e2e2e;
   --gris-claro:  #aaaaaa;
-  --blanco:      #f5f3ef;  /* blanco cálido, no puro */
+  --blanco:      #f5f3ef;
   --blanco-puro: #ffffff;
 
   /* Tipografías */
@@ -48,7 +46,7 @@
   --trans-lenta:  0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ── Reset ────────────────────────────────────────────────── */
+/* Reset */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -91,7 +89,7 @@ button {
   font-family: inherit;
 }
 
-/* ── NAVBAR ───────────────────────────────────────────────── */
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -117,15 +115,7 @@ button {
   border-bottom: 1px solid #e8e8e4;
 }
 
-/* Navbar que se vuelve sólida al hacer scroll (JS añade .scrolled) */
-.navbar.scrolled {
-  background: rgba(8, 8, 8, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--gris-borde);
-}
-
-/* Logo: versión blanca para fondos oscuros */
+/* Logo versión blanca fondos oscuros */
 .navbar__logo {
   display: flex;
   align-items: center;
@@ -138,7 +128,7 @@ button {
   width: auto;
 }
 
-/* Texto de respaldo si no hay SVG de logo */
+/* Texto si no hay SVG de logo */
 .navbar__logo-texto {
   font-family: var(--fuente-titulo);
   font-size: var(--text-lg);
@@ -199,7 +189,6 @@ button {
   transform: scaleX(1);
 }
 
-/* En navbar clara los enlaces son oscuros */
 .navbar--clara .navbar__enlace {
   color: rgba(8, 8, 8, 0.55);
 }
@@ -257,7 +246,7 @@ button {
   border-color: rgba(8, 8, 8, 0.4);
 }
 
-/* ── Menú hamburguesa (móvil) ─────────────────────────────── */
+/* Menú hamburguesa (móvil) */
 .navbar__hamburguesa {
   display: none;
   flex-direction: column;
@@ -310,7 +299,7 @@ button {
   color: var(--blanco);
 }
 
-/* ── FOOTER ───────────────────────────────────────────────── */
+/* FOOTER  */
 .footer {
   background: var(--negro-suave);
   border-top: 1px solid var(--gris-borde);
@@ -411,8 +400,6 @@ button {
   color: rgba(245, 243, 239, 0.2);
 }
 
-/* ── Utilidades generales ─────────────────────────────────── */
-
 /* Contenedor centrado */
 .contenedor {
   max-width: 1100px;
@@ -428,7 +415,7 @@ button {
   margin: var(--gap-md) 0;
 }
 
-/* Etiqueta de categoría (largo / corto / serie) */
+/* Etiqueta de categoría (largo/corto/serie) */
 .etiqueta {
   display: inline-block;
   font-size: var(--text-xs);
@@ -446,7 +433,7 @@ button {
   border-color: #ccc;
 }
 
-/* Botón de descarga */
+/*Botón de descarga*/
 .btn-descarga {
   display: inline-flex;
   align-items: center;
@@ -490,7 +477,7 @@ button {
   font-size: 0.9em;
 }
 
-/* ── Animaciones de entrada ───────────────────────────────── */
+/* Animaciones de entrada */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -517,7 +504,7 @@ button {
 .animar-entrada--delay-3 { animation-delay: 0.45s; }
 .animar-entrada--delay-4 { animation-delay: 0.60s; }
 
-/* ── Responsive ───────────────────────────────────────────── */
+/* Responsive */
 @media (max-width: 768px) {
 
   .navbar {
