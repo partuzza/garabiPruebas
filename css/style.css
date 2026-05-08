@@ -102,7 +102,7 @@ button {
   justify-content: space-between;
   padding: 0 2.5rem;
 
-  /* Fondo transparente por defecto — la home lo usa así */
+  /* Fondo transparente por defecto */
   background: transparent;
   transition: background var(--trans-media),
               border-color var(--trans-media);
