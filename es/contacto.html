@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Contacta con Garabi Films — Productora audiovisual vasca. Donostia-San Sebastián.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="es" href="https://www.garabifilms.eus/es/contacto.html">
+  <link rel="alternate" hreflang="eu" href="https://www.garabifilms.eus/eu/kontaktua.html">
+  <link rel="alternate" hreflang="en" href="https://www.garabifilms.eus/en/contact.html">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/contacto.css">
+
+  <title>Contacto — Garabi Films</title>
+</head>
+
+<body class="pagina-clara">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar--clara" id="navbar" aria-label="Navegación principal">
+    <a href="index.html" class="navbar__logo" aria-label="Garabi Films — Inicio">
+      <span class="navbar__logo-texto">Garabi Films</span>
+    </a>
+
+    <ul class="navbar__menu" role="list">
+      <li>
+        <a href="peliculas.html" class="navbar__enlace">Películas</a>
+      </li>
+      <li>
+        <a href="contacto.html" class="navbar__enlace activo" aria-current="page">Contacto</a>
+      </li>
+    </ul>
+
+    <div class="navbar__idiomas" aria-label="Selección de idioma">
+      <a href="../eu/kontaktua.html" class="navbar__idioma"        hreflang="eu">EU</a>
+      <a href="../es/contacto.html"  class="navbar__idioma activo" hreflang="es" aria-current="true">ES</a>
+      <a href="../en/contact.html"   class="navbar__idioma"        hreflang="en">EN</a>
+    </div>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="navbar__menu-movil" id="menu-movil" role="dialog" aria-label="Menú de navegación">
+    <button class="menu-movil__cerrar" id="btn-cerrar-menu" aria-label="Cerrar menú">✕</button>
+    <ul role="list">
+      <li><a href="peliculas.html" class="navbar__enlace">Películas</a></li>
+      <li><a href="contacto.html"  class="navbar__enlace">Contacto</a></li>
+    </ul>
+    <div class="navbar__idiomas">
+      <a href="../eu/kontaktua.html" class="navbar__idioma" hreflang="eu">EU</a>
+      <a href="../es/contacto.html"  class="navbar__idioma activo" hreflang="es">ES</a>
+      <a href="../en/contact.html"   class="navbar__idioma" hreflang="en">EN</a>
+    </div>
+  </div>
+
+  <!-- CABECERA  -->
+  <header class="contacto-header">
+    <div class="contenedor">
+      <p class="contacto-header__sup">Garabi Films</p>
+      <h1 class="contacto-header__titulo">Contacto</h1>
+      <p class="contacto-header__subtitulo">
+        Para proyectos, prensa, distribución o cualquier consulta.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div class="contacto-cuerpo contenedor">
+
+      <!--  COLUMNA IZQUIERDA: Formulario  -->
+      <section class="contacto-formulario-wrap" aria-label="Formulario de contacto">
+        <h2 class="contacto-seccion__titulo">Escríbenos</h2>
+        <form
+          class="contacto-form"
+          id="formulario-contacto"
+          action="https://formspree.io/f/TU_ID_FORMSPREE"
+          method="POST"
+          novalidate
+          aria-label="Formulario de contacto">
+
+          <!-- Campo oculto: idioma del formulario-->
+          <input type="hidden" name="_language" value="es">
+          <!-- Asunto del email que recibirás -->
+          <input type="hidden" name="_subject" value="Contacto desde garabifilms.eus">
+
+          <div class="form-grupo">
+            <label class="form-etiqueta" for="nombre">
+              Nombre <span class="form-requerido" aria-hidden="true">*</span>
+            </label>
+            <input
+              class="form-campo"
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre completo"
+              required
+              autocomplete="name"
+              aria-required="true">
+            <span class="form-error" id="error-nombre" role="alert"></span>
+          </div>
+
+          <div class="form-grupo">
+            <label class="form-etiqueta" for="email">
+              Email <span class="form-requerido" aria-hidden="true">*</span>
+            </label>
+            <input
+              class="form-campo"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tu@email.com"
+              required
+              autocomplete="email"
+              aria-required="true">
+            <span class="form-error" id="error-email" role="alert"></span>
+          </div>
+
+          <div class="form-grupo">
+            <label class="form-etiqueta" for="asunto">Asunto</label>
+            <select class="form-campo form-select" id="asunto" name="asunto">
+              <option value="" disabled selected>Selecciona un asunto</option>
+              <option value="prensa">Prensa y medios</option>
+              <option value="distribucion">Distribución</option>
+              <option value="coproduccion">Coproducción</option>
+              <option value="festivales">Festivales</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label class="form-etiqueta" for="mensaje">
+              Mensaje <span class="form-requerido" aria-hidden="true">*</span>
+            </label>
+            <textarea
+              class="form-campo form-textarea"
+              id="mensaje"
+              name="mensaje"
+              placeholder="Cuéntanos en qué podemos ayudarte..."
+              required
+              rows="6"
+              aria-required="true"></textarea>
+            <span class="form-error" id="error-mensaje" role="alert"></span>
+          </div>
+
+          <!-- Aviso RGPD -->
+          <div class="form-grupo form-grupo--check">
+            <label class="form-check-label">
+              <input type="checkbox" name="rgpd" required aria-required="true"
+                     class="form-checkbox" id="rgpd">
+              <span>
+                He leído y acepto la
+                <a href="privacidad.html" class="form-enlace">política de privacidad</a>.
+                Los datos se usarán exclusivamente para responder a tu consulta.
+              </span>
+            </label>
+            <span class="form-error" id="error-rgpd" role="alert"></span>
+          </div>
+
+          <button type="submit" class="form-btn-enviar" id="btn-enviar">
+            <span id="btn-texto">Enviar mensaje</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+
+          <!-- Mensajes de respuesta del envío -->
+          <div class="form-respuesta form-respuesta--ok" id="msg-ok" role="alert" aria-live="polite">
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            Mensaje enviado. Te responderemos lo antes posible.
+          </div>
+          <div class="form-respuesta form-respuesta--error" id="msg-error" role="alert" aria-live="polite">
+            <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+            Ha habido un error. Inténtalo de nuevo o escríbenos directamente a
+            <a href="mailto:hola@garabifilms.eus">hola@garabifilms.eus</a>.
+          </div>
+
+        </form>
+      </section>
+
+      <!-- COLUMNA DERECHA: Equipo + datos -->
+      <aside class="contacto-lateral" aria-label="Datos de contacto y equipo">
+
+        <!-- Equipo -->
+        <section aria-label="Equipo">
+          <h2 class="contacto-seccion__titulo">Equipo</h2>
+
+          <div class="equipo-lista">
+
+            <article class="equipo-card">
+              <div class="equipo-card__foto-placeholder" aria-hidden="true"></div>
+              <div class="equipo-card__info">
+                <h3 class="equipo-card__nombre">Marian Fernández Pascal</h3>
+                <p class="equipo-card__rol">Productora??</p>
+                <a href="mailto:garabifilms@gmail.com" class="equipo-card__email">
+                  garabifilms@gmail.com
+                </a>
+              </div>
+            </article>
+
+            <article class="equipo-card">
+              <div class="equipo-card__foto-placeholder" aria-hidden="true"></div>
+              <div class="equipo-card__info">
+                <h3 class="equipo-card__nombre">Koldo Almandoz</h3>
+                <p class="equipo-card__rol">Director y Guionista</p>
+                <a href="mailto:garabifilms@gmail.com" class="equipo-card__email">
+                  garabifilms@gmail.com
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Datos de la productora -->
+        <section class="contacto-datos" aria-label="Datos de la empresa">
+          <h2 class="contacto-seccion__titulo">Productora</h2>
+
+          <address class="contacto-datos__bloque" style="font-style:normal;">
+            <p class="contacto-datos__nombre">Garabi Films S.L.</p>
+            <p class="contacto-datos__linea">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              Donostia-San Sebastián, Gipuzkoa
+            </p>
+            <p class="contacto-datos__linea">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:garabifilms@gmail.com">garabifilms@gmail.com</a>
+            </p>
+            <p class="contacto-datos__linea">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <a href="tel:+34659493647">+34 659 493 647</a>
+            </p>
+          </address>
+
+          <!-- Redes sociales -->
+          <div class="contacto-redes">
+            <a href="https://www.instagram.com/garabifilms"
+               class="contacto-red" target="_blank" rel="noopener noreferrer"
+               aria-label="Instagram de Garabi Films">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              Instagram
+            </a>
+            <a href="https://vimeo.com/garabifilms"
+               class="contacto-red" target="_blank" rel="noopener noreferrer"
+               aria-label="Vimeo de Garabi Films">
+              <i class="fa-brands fa-vimeo-v" aria-hidden="true"></i>
+              Vimeo
+            </a>
+            <a href="https://www.facebook.com/garabifilms"
+               class="contacto-red" target="_blank" rel="noopener noreferrer"
+               aria-label="Facebook de Garabi Films">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              Facebook
+            </a>
+          </div>
+        </section>
+
+      </aside>
+
+    </div>
+    <!-- /contacto-cuerpo -->
+  </main>
+
+  <!-- FOOTER  -->
+  <footer class="footer footer--clara" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <p class="footer__logo-texto">Garabi Films</p>
+        <p class="footer__descripcion">
+          Productora audiovisual vasca fundada en 2012.
+          Cine de autor desde el País Vasco.
+        </p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__titulo-col">Síguenos</p>
+        <nav class="footer__redes" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/garabifilms" class="footer__red"
+             target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://vimeo.com/garabifilms" class="footer__red"
+             target="_blank" rel="noopener noreferrer">Vimeo</a>
+          <a href="https://www.facebook.com/garabifilms" class="footer__red"
+             target="_blank" rel="noopener noreferrer">Facebook</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <p class="footer__titulo-col">Contacto</p>
+        <address class="footer__contacto-item" style="font-style: normal;">
+          <a href="mailto:garabifilms@gmail.com">garabifilms@gmail.com</a><br>
+          SAN PEDRO, 19 - 2<br>
+          20110 PASAIA
+          Gipuzkoa, Euskadi
+        </address>
+      </div>
+    </div>
+    <div class="footer__barra">
+      <p class="footer__copyright">© 2026 Garabi Films S.L. Todos los derechos reservados.</p>
+      <p class="footer__credito">Diseño y desarrollo web</p>
+    </div>
+  </footer>
+
+</body>
+</html>

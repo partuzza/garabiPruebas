@@ -1,0 +1,382 @@
+/* GARABI FILMS — ficha.css
+   Estilos específicos de la página de ficha individual */
+
+/* Hero de la ficha */
+.ficha-hero {
+  position: relative;
+  height: 55vh;
+  min-height: 380px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ficha-hero__imagen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.ficha-hero__placeholder {
+  position: absolute;
+  inset: 0;
+}
+
+/* Gradiente: más intenso que en la home porque el hero es más pequeño */
+.ficha-hero__gradiente {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8,8,8,0.15) 0%,
+    rgba(8,8,8,0.55) 60%,
+    rgba(8,8,8,0.92) 100%
+  );
+  z-index: 1;
+}
+
+.ficha-hero__contenido {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2.5rem var(--gap-lg);
+}
+
+/* Migas de pan */
+.ficha-hero__breadcrumb {
+  margin-bottom: var(--gap-md);
+}
+
+.ficha-hero__breadcrumb-enlace {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245,243,239,0.5);
+  transition: color var(--trans-rapida);
+}
+
+.ficha-hero__breadcrumb-enlace:hover {
+  color: var(--blanco);
+}
+
+.ficha-hero__tipo {
+  display: block;
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245,243,239,0.5);
+  margin-bottom: var(--gap-xs);
+}
+
+.ficha-hero__titulo {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--blanco);
+  line-height: 1.05;
+  margin-bottom: var(--gap-xs);
+}
+
+.ficha-hero__director {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: rgba(245,243,239,0.55);
+}
+
+.ficha-hero__director em {
+  font-style: normal;
+  color: rgba(245,243,239,0.8);
+}
+
+/* Cuerpo: layout de dos columnas */
+.ficha-cuerpo {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--gap-xl);
+  padding-top: var(--gap-xl);
+  padding-bottom: calc(var(--gap-xl) * 1.5);
+  align-items: start;
+}
+
+/* Secciones genéricas */
+.ficha-seccion {
+  margin-bottom: var(--gap-xl);
+}
+
+.ficha-seccion:last-child {
+  margin-bottom: 0;
+}
+
+.ficha-seccion__titulo {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: var(--gap-md);
+  padding-bottom: var(--gap-xs);
+  border-bottom: 1px solid #e8e8e4;
+}
+
+/* Sección en la columna lateral */
+.ficha-seccion--lateral {
+  margin-bottom: var(--gap-lg);
+}
+
+/* Sinopsis */
+.ficha-sinopsis {
+  font-family: var(--fuente-titulo);
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: 1.75;
+  color: #333;
+  max-width: 640px;
+}
+
+.ficha-sinopsis em {
+  font-style: italic;
+  color: #111;
+}
+
+/* Lista de festivales */
+.festivales-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.festivales-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: var(--gap-sm);
+  padding: var(--gap-sm) 0;
+  border-bottom: 1px solid #f0ede8;
+  align-items: baseline;
+}
+
+.festivales-item:first-child {
+  border-top: 1px solid #f0ede8;
+}
+
+.festivales-item__pais {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.festivales-item__nombre {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Galería de fotogramas */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-xs);
+}
+
+.galeria-item {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 2px;
+  cursor: zoom-in;
+  transition: opacity var(--trans-rapida), transform var(--trans-media);
+}
+
+.galeria-item:hover {
+  opacity: 0.85;
+  transform: scale(1.01);
+}
+
+.galeria-item--placeholder {
+  aspect-ratio: 16 / 9;
+  border-radius: 2px;
+}
+
+/* Embed de vídeo  */
+.video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: var(--gap-xs);
+}
+
+.video-embed {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-nota {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-xs);
+  font-weight: 300;
+  color: #bbb;
+  letter-spacing: 0.04em;
+}
+
+/* Ficha técnica */
+.ficha-tecnica {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ficha-tecnica__fila {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: var(--gap-sm);
+  padding: 8px 0;
+  border-bottom: 1px solid #f0ede8;
+}
+
+.ficha-tecnica__fila:first-child {
+  border-top: 1px solid #f0ede8;
+}
+
+.ficha-tecnica__etiqueta {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.ficha-tecnica__valor {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: #333;
+}
+
+/* Descargas  */
+.descargas__grupo {
+  margin-bottom: var(--gap-md);
+}
+
+.descargas__grupo-titulo {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-bottom: var(--gap-xs);
+}
+
+/* Botones de descarga en la lateral: apilados en columna */
+.descargas .btn-descarga {
+  display: flex;
+  width: 100%;
+  margin-bottom: var(--gap-xs);
+  justify-content: flex-start;
+}
+
+/*Columna lateral sticky */
+.ficha-lateral {
+  position: sticky;
+  top: calc(var(--navbar-altura) + var(--gap-md));
+}
+
+.footer--clara {
+  background: #f5f3ef;
+  border-top: 1px solid #e0ddd8;
+}
+
+.footer--clara .footer__logo-texto,
+.footer--clara .footer__descripcion,
+.footer--clara .footer__titulo-col,
+.footer--clara .footer__red,
+.footer--clara .footer__contacto-item {
+  color: #555;
+}
+
+.footer--clara .footer__logo-texto {
+  color: var(--negro);
+}
+
+.footer--clara .footer__red::before {
+  content: '↗';
+}
+
+.footer--clara .footer__red:hover {
+  color: var(--negro);
+}
+
+.footer--clara .footer__barra {
+  border-top-color: #ddd;
+}
+
+.footer--clara .footer__copyright,
+.footer--clara .footer__credito {
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ficha-cuerpo {
+    grid-template-columns: 1fr;
+  }
+
+  .ficha-lateral {
+    position: static;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ficha-hero {
+    height: 45vh;
+    min-height: 300px;
+  }
+
+  .ficha-hero__contenido {
+    padding: 0 1.4rem var(--gap-md);
+  }
+
+  .ficha-cuerpo {
+    padding-top: var(--gap-lg);
+    padding-bottom: var(--gap-xl);
+  }
+
+  .festivales-item {
+    grid-template-columns: 80px 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ficha-tecnica__fila {
+    grid-template-columns: 85px 1fr;
+  }
+}
