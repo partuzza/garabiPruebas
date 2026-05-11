@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caro Bastiano | Garabi Films</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ficha.css">
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="navbar__contenedor">
+      <a href="../index.html" class="navbar__logo">Garabi Films</a>
+
+      <nav class="navbar__nav" aria-label="Navegación principal">
+        <ul class="navbar__menunu">
+          ><a href="../index.html">Inicio</a></l/li>
+          ><a href="../peliculas.html">Películas</a></l/li>
+          ><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="navbar__hamburguesa" id="btn-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="navbar__menu-movil" id="menu-movil">
+      <button class="menu-movil__cerrar" id="btn-cerrar-menu" aria-label="Cerrar menú">✕</button>
+      <a href="../index.html">Inicio</a>
+      <a href="../peliculas.html">Películas</a>
+      <a href="../contacto.html">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="ficha-hero">
+      <div class="ficha-hero__contenedor">
+        <p class="ficha-hero__kicker">Largometraje</p>
+        <h1>Caro Bastiano</h1>
+        <p class="ficha-hero__subtitulo">Una obra dirigida por Nombre Apellido.</p>
+      </div>
+    </section>
+
+    <section class="ficha">
+      <div class="ficha__contenedor">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="../peliculas.html">← Catálogo</a>
+        </nav>
+
+        <div class="ficha__layout">
+          <figure class="ficha__portada">
+            <img src="../../img/caro-bastiano.jpg" alt="Cartel principal de Caro Bastiano">
+          </figure>
+
+          <div class="ficha__contenido">
+            <article class="ficha__bloque">
+              <h2>Sinopsis</h2>
+              <p>
+                Caro Bastiano narra la historia de un personaje marcado por el paso del tiempo,
+                los recuerdos y la necesidad de reconectar con su entorno. La obra combina una
+                estética sobria con una narración íntima y emocional.
+              </p>
+            </article>
+
+            <article class="ficha__bloque">
+              <h2>Ficha técnica</h2>
+              <ul class="ficha__listata">
+                ><strong>Año:</strong> 2026</l/li>
+                ><strong>Dirección:</strong> Nombre Apellido</l/li>
+                ><strong>Duración:</strong> 102 min</l/li>
+                ><strong>Formato:</strong> 2.35:1</li>
+                ><strong>Idioma original:</strong> Castellano</l/li>
+                ><strong>Género:</strong> Drama</li>
+              </ul>
+            </article>
+
+            <article class="ficha__bloque">
+              <h2>Equipo artístico y técnico</h2>
+              <ul class="ficha__lista ficha__lista--columnasas">
+                ><strong>Protagonista:</strong> Nombre Apellido</l/li>
+                ><strong>Fotografía:</strong> Nombre Apellido</l/li>
+                ><strong>Montaje:</strong> Nombre Apellido</l/li>
+                ><strong>Música:</strong> Nombre Apellido</l/li>
+                ><strong>Arte:</strong> Nombre Apellido</l/li>
+                ><strong>Sonido:</strong> Nombre Apellido</li>
+              </ul>
+            </article>
+
+            <article class="ficha__bloque">
+              <h2>Material descargable</h2>
+              <div class="ficha__descargas">
+                <a href="../../assets/peliculas/caro-bastiano/poster-caro-bastiano.jpg" download class="btn btn--principal">Descargar póster</a>
+                <a href="../../assets/peliculas/caro-bastiano/fotogramas-caro-bastiano.zip" download class="btn btn--secundario">Descargar fotogramas</a>
+                <a href="../../assets/peliculas/caro-bastiano/pressbook-caro-bastiano.pdf" download class="btn btn--secundario">Descargar pressbook</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <section class="ficha__galeria">
+          <h2>Galería</h2>
+          <div class="ficha__galeria-grid">
+            <img src="../../img/caro-bastiano-1.jpg" alt="Fotograma 1 de Caro Bastiano">
+            <img src="../../img/caro-bastiano-2.jpg" alt="Fotograma 2 de Caro Bastiano">
+            <img src="../../img/caro-bastiano-3.jpg" alt="Fotograma 3 de Caro Bastiano">
+          </div>
+        </section>
+
+        <section class="ficha__festival">
+          <h2>Festivales</h2>
+          <ul class="ficha__listata">
+            ><strong>España:</strong> Festival Ejemplo, 2026</l/li>
+            ><strong>Francia:</strong> Festival Ejemplo 2, 2026</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    }, { passive: true });
+
+    const btnH = document.getElementById('btn-hamburguesa');
+    const btnC = document.getElementById('btn-cerrar-menu');
+    const menu = document.getElementById('menu-movil');
+
+    btnH.addEventListener('click', () => {
+      menu.classList.add('abierto');
+      btnH.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    });
+
+    btnC.addEventListener('click', () => {
+      menu.classList.remove('abierto');
+      btnH.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        menu.classList.remove('abierto');
+        btnH.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
