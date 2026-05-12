@@ -3,130 +3,340 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caro Bastiano | Garabi Films</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/ficha.css">
+  <meta name="description"
+        content="Caro Bastiano — Largometraje de Garabi Films. 80 min · 2026. Sinopsis, ficha técnica, galería y materiales de prensa.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Caro Bastiano — Garabi Films">
+  <meta property="og:description" content="Largometraje · 80 min · 2026.">
+  <meta property="og:type"        content="video.movie">
+  <meta property="og:image"       content="https://www.garabifilms.eus/img/peliculas/caro-bastiano/og.jpg">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Movie",
+    "name": "Caro Bastiano",
+    "description": "Largometraje producido por Garabi Films en 2026.",
+    "dateCreated": "2026",
+    "director": {
+      "@type": "Person",
+      "name": "Nombre Apellido"
+    },
+    "productionCompany": {
+      "@type": "Organization",
+      "name": "Garabi Films"
+    },
+    "duration": "PT80M",
+    "inLanguage": "eu",
+    "genre": ["Drama"]
+  }
+  </script>
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="es" href="https://www.garabifilms.eus/es/peliculas/caro-bastiano.html">
+  <link rel="alternate" hreflang="eu" href="https://www.garabifilms.eus/eu/peliculas/caro-bastiano.html">
+  <link rel="alternate" hreflang="en" href="https://www.garabifilms.eus/en/peliculas/caro-bastiano.html">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/ficha.css">
+  <link rel="stylesheet" href="../../css/caro-bastiano.css">
+
+  <title>Caro Bastiano — Garabi Films</title>
 </head>
-<body>
-  <header class="navbar" id="navbar">
-    <div class="navbar__contenedor">
-      <a href="../index.html" class="navbar__logo">Garabi Films</a>
 
-      <nav class="navbar__nav" aria-label="Navegación principal">
-        <ul class="navbar__menunu">
-          ><a href="../index.html">Inicio</a></l/li>
-          ><a href="../peliculas.html">Películas</a></l/li>
-          ><a href="../contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+<body class="pagina-clara">
 
-      <button class="navbar__hamburguesa" id="btn-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <!--NAVBAR -->
+  <nav class="navbar navbar--clara" id="navbar" aria-label="Navegación principal">
+    <a href="../index.html" class="navbar__logo" aria-label="Garabi Films — Inicio">
+      <span class="navbar__logo-texto">Garabi Films</span>
+    </a>
+
+    <ul class="navbar__menu" role="list">
+      <li><a href="../peliculas.html" class="navbar__enlace activo">Películas</a></li>
+      <li><a href="../contacto.html"  class="navbar__enlace">Contacto</a></li>
+    </ul>
+
+    <div class="navbar__idiomas" aria-label="Selección de idioma">
+      <a href="../../eu/peliculas/caro-bastiano.html" class="navbar__idioma"        hreflang="eu">EU</a>
+      <a href="../../es/peliculas/caro-bastiano.html" class="navbar__idioma activo" hreflang="es" aria-current="true">ES</a>
+      <a href="../../en/peliculas/caro-bastiano.html" class="navbar__idioma"        hreflang="en">EN</a>
     </div>
 
-    <div class="navbar__menu-movil" id="menu-movil">
-      <button class="menu-movil__cerrar" id="btn-cerrar-menu" aria-label="Cerrar menú">✕</button>
-      <a href="../index.html">Inicio</a>
-      <a href="../peliculas.html">Películas</a>
-      <a href="../contacto.html">Contacto</a>
+    <button class="navbar__hamburguesa" id="btn-hamburguesa"
+            aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="navbar__menu-movil" id="menu-movil" role="dialog" aria-label="Menú de navegación">
+    <button class="menu-movil__cerrar" id="btn-cerrar-menu" aria-label="Cerrar menú">✕</button>
+    <ul role="list">
+      <li><a href="../peliculas.html" class="navbar__enlace">Películas</a></li>
+      <li><a href="../contacto.html"  class="navbar__enlace">Contacto</a></li>
+    </ul>
+    <div class="navbar__idiomas">
+      <a href="../../eu/peliculas/caro-bastiano.html" class="navbar__idioma" hreflang="eu">EU</a>
+      <a href="../../es/peliculas/caro-bastiano.html" class="navbar__idioma activo" hreflang="es">ES</a>
+      <a href="../../en/peliculas/caro-bastiano.html" class="navbar__idioma" hreflang="en">EN</a>
     </div>
-  </header>
+  </div>
 
   <main>
-    <section class="ficha-hero">
-      <div class="ficha-hero__contenedor">
-        <p class="ficha-hero__kicker">Largometraje</p>
-        <h1>Caro Bastiano</h1>
-        <p class="ficha-hero__subtitulo">Una obra dirigida por Nombre Apellido.</p>
-      </div>
-    </section>
 
-    <section class="ficha">
-      <div class="ficha__contenedor">
-        <nav class="breadcrumb" aria-label="Ruta de navegación">
-          <a href="../peliculas.html">← Catálogo</a>
+    <!-- HERO -->
+    <section class="ficha-hero" aria-label="Imagen principal de la obra">
+      <div class="ficha-hero__placeholder ficha-hero__placeholder--caro-bastiano"
+           aria-hidden="true"></div>
+      <div class="ficha-hero__gradiente" aria-hidden="true"></div>
+
+      <div class="ficha-hero__contenido">
+        <nav class="ficha-hero__breadcrumb" aria-label="Ruta de navegación">
+          <a href="../peliculas.html" class="ficha-hero__breadcrumb-enlace">← Catálogo</a>
         </nav>
 
-        <div class="ficha__layout">
-          <figure class="ficha__portada">
-            <img src="../../img/caro-bastiano.jpg" alt="Cartel principal de Caro Bastiano">
-          </figure>
-
-          <div class="ficha__contenido">
-            <article class="ficha__bloque">
-              <h2>Sinopsis</h2>
-              <p>
-                Caro Bastiano narra la historia de un personaje marcado por el paso del tiempo,
-                los recuerdos y la necesidad de reconectar con su entorno. La obra combina una
-                estética sobria con una narración íntima y emocional.
-              </p>
-            </article>
-
-            <article class="ficha__bloque">
-              <h2>Ficha técnica</h2>
-              <ul class="ficha__listata">
-                ><strong>Año:</strong> 2026</l/li>
-                ><strong>Dirección:</strong> Nombre Apellido</l/li>
-                ><strong>Duración:</strong> 102 min</l/li>
-                ><strong>Formato:</strong> 2.35:1</li>
-                ><strong>Idioma original:</strong> Castellano</l/li>
-                ><strong>Género:</strong> Drama</li>
-              </ul>
-            </article>
-
-            <article class="ficha__bloque">
-              <h2>Equipo artístico y técnico</h2>
-              <ul class="ficha__lista ficha__lista--columnasas">
-                ><strong>Protagonista:</strong> Nombre Apellido</l/li>
-                ><strong>Fotografía:</strong> Nombre Apellido</l/li>
-                ><strong>Montaje:</strong> Nombre Apellido</l/li>
-                ><strong>Música:</strong> Nombre Apellido</l/li>
-                ><strong>Arte:</strong> Nombre Apellido</l/li>
-                ><strong>Sonido:</strong> Nombre Apellido</li>
-              </ul>
-            </article>
-
-            <article class="ficha__bloque">
-              <h2>Material descargable</h2>
-              <div class="ficha__descargas">
-                <a href="../../assets/peliculas/caro-bastiano/poster-caro-bastiano.jpg" download class="btn btn--principal">Descargar póster</a>
-                <a href="../../assets/peliculas/caro-bastiano/fotogramas-caro-bastiano.zip" download class="btn btn--secundario">Descargar fotogramas</a>
-                <a href="../../assets/peliculas/caro-bastiano/pressbook-caro-bastiano.pdf" download class="btn btn--secundario">Descargar pressbook</a>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <section class="ficha__galeria">
-          <h2>Galería</h2>
-          <div class="ficha__galeria-grid">
-            <img src="../../img/caro-bastiano-1.jpg" alt="Fotograma 1 de Caro Bastiano">
-            <img src="../../img/caro-bastiano-2.jpg" alt="Fotograma 2 de Caro Bastiano">
-            <img src="../../img/caro-bastiano-3.jpg" alt="Fotograma 3 de Caro Bastiano">
-          </div>
-        </section>
-
-        <section class="ficha__festival">
-          <h2>Festivales</h2>
-          <ul class="ficha__listata">
-            ><strong>España:</strong> Festival Ejemplo, 2026</l/li>
-            ><strong>Francia:</strong> Festival Ejemplo 2, 2026</li>
-          </ul>
-        </section>
+        <span class="ficha-hero__tipo">Largometraje · 80 min · 2026</span>
+        <h1 class="ficha-hero__titulo">Caro Bastiano</h1>
+        <p class="ficha-hero__director">Una película de <em>Nombre Apellido</em></p>
       </div>
     </section>
+
+    <!--CUERPO -->
+    <div class="ficha-cuerpo contenedor">
+
+      <!-- Columna principal -->
+      <div class="ficha-principal">
+
+        <!-- Sinopsis -->
+        <section class="ficha-seccion" aria-label="Sinopsis">
+          <h2 class="ficha-seccion__titulo">Sinopsis</h2>
+          <p class="ficha-sinopsis">
+            Descripción breve del largometraje. Bastiano recibe una carta que no
+            esperaba. Lo que empieza como un viaje de pocos días a una ciudad
+            desconocida se convierte en el reencuentro con una parte de su historia
+            que creía olvidada. <em>Caro Bastiano</em> es una película sobre las
+            cartas que nunca enviamos y las que llegan demasiado tarde.
+          </p>
+        </section>
+
+        <!-- Festivales -->
+        <section class="ficha-seccion" aria-label="Festivales">
+          <h2 class="ficha-seccion__titulo">Festivales</h2>
+          <ul class="festivales-lista">
+            <li class="festivales-item">
+              <span class="festivales-item__pais">España</span>
+              <span class="festivales-item__nombre">Festival Ejemplo, 2026</span>
+            </li>
+            <li class="festivales-item">
+              <span class="festivales-item__pais">Italia</span>
+              <span class="festivales-item__nombre">Festival Ejemplo 2, 2026</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Galería -->
+        <section class="ficha-seccion" aria-label="Galería de fotogramas">
+          <h2 class="ficha-seccion__titulo">Galería</h2>
+          <div class="galeria-grid">
+            <div class="galeria-item galeria-item--placeholder" style="background:#1a1410;"></div>
+            <div class="galeria-item galeria-item--placeholder" style="background:#201810;"></div>
+            <div class="galeria-item galeria-item--placeholder" style="background:#160e08;"></div>
+            <div class="galeria-item galeria-item--placeholder" style="background:#1c1208;"></div>
+            <div class="galeria-item galeria-item--placeholder" style="background:#241a10;"></div>
+            <div class="galeria-item galeria-item--placeholder" style="background:#100c08;"></div>
+          </div>
+        </section>
+
+        <!-- Tráiler -->
+        <section class="ficha-seccion" aria-label="Tráiler">
+          <h2 class="ficha-seccion__titulo">Tráiler</h2>
+          <div class="video-wrap">
+            <!--
+              Sustituir el ID de Vimeo por el real.
+              ?dnt=1 desactiva el tracking (cumple RGPD).
+            -->
+            <iframe
+              src="https://player.vimeo.com/video/000000000?dnt=1&color=f5f3ef&title=0&byline=0&portrait=0"
+              class="video-embed"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              title="Tráiler oficial de Caro Bastiano"
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="video-nota">Tráiler oficial · Vimeo · 2026</p>
+        </section>
+
+      </div>
+      <!-- /ficha-principal -->
+
+      <!-- Columna lateral -->
+      <aside class="ficha-lateral" aria-label="Ficha técnica y descargas">
+
+        <!-- Ficha técnica -->
+        <section class="ficha-seccion ficha-seccion--lateral" aria-label="Ficha técnica">
+          <h2 class="ficha-seccion__titulo">Ficha técnica</h2>
+          <dl class="ficha-tecnica">
+
+            <div class="ficha-tecnica__fila">
+              <dt class="ficha-tecnica__etiqueta">Dirección</dt>
+              <dd class="ficha-tecnica__valor">Nombre Apellido</dd>
+            </div>
+            <div class="ficha-tecnica__fila">
+              <dt class="ficha-tecnica__etiqueta">Producción</dt>
+              <dd class="ficha-tecnica__valor">Nombre Apellido</dd>
+            </div>
+            <div class="ficha-tecnica__fila">
+              <dt class="ficha-tecnica__etiqueta">Guión</dt>
+              <dd class="ficha-tecnica__valor">Nombre Apellido</dd>
+            </div>
+            <div class="ficha-tecnica__fila">
+              <dt class="ficha-tecnica__etiqueta">Fotografía</dt>
+              <dd class="ficha-tecnica__valor">Nombre Apellido</dd>
+            </div>
+            <div class="ficha-tecnica__fila">
+              <dt class="ficha-tecnica__etiqueta">Montaje</dt>
+              <dd class="ficha-tecnica__valor">Nombre Apellido</dd>
+            </div>
+            <div class="ficha-tecnica__fila">
+              <dt class="ficha-tecnica__etiqueta">Música</dt>
+              <dd class="ficha-tecnica__valor">Nombre Apellido</dd>
+            </div>
+            <div class="ficha-tecnica__fila">
+              <dt class="ficha-tecnica__etiqueta">Duración</dt>
+              <dd class="ficha-tecnica__valor">80 min</dd>
+            </div>
+            <div class="ficha-tecnica__fila">
+              <dt class="ficha-tecnica__etiqueta">Formato</dt>
+              <dd class="ficha-tecnica__valor">4K / 1.85:1</dd>
+            </div>
+            <div class="ficha-tecnica__fila">
+              <dt class="ficha-tecnica__etiqueta">V.O.</dt>
+              <dd class="ficha-tecnica__valor">Euskera / Italiano</dd>
+            </div>
+            <div class="ficha-tecnica__fila">
+              <dt class="ficha-tecnica__etiqueta">Año</dt>
+              <dd class="ficha-tecnica__valor">2026</dd>
+            </div>
+
+          </dl>
+        </section>
+
+        <!-- Descargas -->
+        <section class="ficha-seccion ficha-seccion--lateral descargas"
+                 aria-label="Materiales descargables">
+          <h2 class="ficha-seccion__titulo">Descargas</h2>
+
+          <div class="descargas__grupo">
+            <p class="descargas__grupo-titulo">Imágenes</p>
+
+            <a href="../../assets/peliculas/caro-bastiano/poster-caro-bastiano.jpg"
+               download="poster-caro-bastiano.jpg"
+               class="btn-descarga"
+               aria-label="Descargar poster en alta resolución">
+              <i class="fa-solid fa-arrow-down btn-descarga__icono" aria-hidden="true"></i>
+              Poster HD
+            </a>
+
+            <a href="../../assets/peliculas/caro-bastiano/fotogramas-caro-bastiano.zip"
+               download="fotogramas-caro-bastiano.zip"
+               class="btn-descarga"
+               aria-label="Descargar pack de fotogramas en ZIP">
+              <i class="fa-solid fa-arrow-down btn-descarga__icono" aria-hidden="true"></i>
+              Fotogramas (ZIP)
+            </a>
+          </div>
+
+          <div class="descargas__grupo">
+            <p class="descargas__grupo-titulo">Documentos</p>
+
+            <a href="../../assets/peliculas/caro-bastiano/pressbook-caro-bastiano.pdf"
+               download="pressbook-caro-bastiano.pdf"
+               class="btn-descarga"
+               aria-label="Descargar pressbook en PDF">
+              <i class="fa-solid fa-file-pdf btn-descarga__icono" aria-hidden="true"></i>
+              Pressbook PDF
+            </a>
+
+            <button class="btn-descarga"
+                    id="btn-pdf-festivales"
+                    aria-label="Generar y descargar lista de festivales en PDF">
+              <i class="fa-solid fa-file-pdf btn-descarga__icono" aria-hidden="true"></i>
+              Lista festivales PDF
+            </button>
+          </div>
+
+          <div class="descargas__grupo">
+            <p class="descargas__grupo-titulo">Audio</p>
+
+            <a href="../../assets/peliculas/caro-bastiano/banda-sonora-caro-bastiano.mp3"
+               download="banda-sonora-caro-bastiano.mp3"
+               class="btn-descarga"
+               aria-label="Descargar banda sonora en MP3">
+              <i class="fa-solid fa-music btn-descarga__icono" aria-hidden="true"></i>
+              Banda sonora (MP3)
+            </a>
+          </div>
+
+        </section>
+
+      </aside>
+
+    </div>
+    <!-- /ficha-cuerpo -->
+
   </main>
 
-  <script>
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) navbar.classList.add('scrolled');
-      else navbar.classList.remove('scrolled');
-    }, { passive: true });
+  <!-- FOOTER -->
+  <footer class="footer footer--clara" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <p class="footer__logo-texto">Garabi Films</p>
+        <p class="footer__descripcion">
+          Productora audiovisual vasca fundada en 0000.
+        </p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__titulo-col">Síguenos</p>
+        <nav class="footer__redes" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/garabifilms" class="footer__red"
+             target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://vimeo.com/garabifilms" class="footer__red"
+             target="_blank" rel="noopener noreferrer">Vimeo</a>
+          <a href="https://www.facebook.com/garabifilms" class="footer__red"
+             target="_blank" rel="noopener noreferrer">Facebook</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <p class="footer__titulo-col">Contacto</p>
+        <address class="footer__contacto-item" style="font-style:normal;">
+          <a href="mailto:ejemplo@garabifilms.com">ejemplo@garabifilms.com</a><br>
+          Donostia-San Sebastián<br>
+          Gipuzkoa, Euskadi
+        </address>
+      </div>
+    </div>
+    <div class="footer__barra">
+      <p class="footer__copyright">© 2026 Garabi Films S.L. Todos los derechos reservados.</p>
+      <p class="footer__credito">Diseño y desarrollo web</p>
+    </div>
+  </footer>
 
+  <!-- JAVASCRIPT -->
+  <script>
+    /* ── Menú móvil ── */
     const btnH = document.getElementById('btn-hamburguesa');
     const btnC = document.getElementById('btn-cerrar-menu');
     const menu = document.getElementById('menu-movil');
@@ -136,20 +346,79 @@
       btnH.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
     });
-
     btnC.addEventListener('click', () => {
       menu.classList.remove('abierto');
       btnH.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     });
-
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
       if (e.key === 'Escape') {
         menu.classList.remove('abierto');
         btnH.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       }
     });
+
+    /*PDF de festivales con jsPDF */
+    document.getElementById('btn-pdf-festivales').addEventListener('click', () => {
+
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+
+      const titulo    = 'CARO BASTIANO';
+      const direccion = 'Nombre Apellido';
+      const anyo      = '2026';
+      const tipo      = 'Largometraje · 80 min';
+      const festivales = [
+        { pais: 'España', nombre: 'Festival Ejemplo, 2026'   },
+        { pais: 'Italia', nombre: 'Festival Ejemplo 2, 2026' },
+      ];
+
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(18);
+      doc.text(titulo, 20, 26);
+
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(10);
+      doc.setTextColor(100);
+      doc.text(`Dir. ${direccion} · ${anyo} · ${tipo}`, 20, 33);
+
+      doc.setDrawColor(200);
+      doc.line(20, 38, 190, 38);
+
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(11);
+      doc.setTextColor(30);
+      doc.text('FESTIVALES / ZINEMALDIAK / FESTIVALS', 20, 47);
+
+      let y = 56;
+      let paisActual = '';
+
+      festivales.forEach(f => {
+        if (f.pais !== paisActual) {
+          if (y > 56) y += 3;
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(9);
+          doc.setTextColor(80);
+          doc.text(f.pais.toUpperCase(), 20, y);
+          y += 5;
+          paisActual = f.pais;
+        }
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(10);
+        doc.setTextColor(40);
+        doc.text(`— ${f.nombre}`, 24, y);
+        y += 6;
+      });
+
+      doc.setFontSize(8);
+      doc.setTextColor(160);
+      doc.text('Garabi Films · ejemplo@garabifilms.com · garabifilms.eus', 20, 285);
+      doc.text(`Generado el ${new Date().toLocaleDateString('es-ES')}`, 152, 285);
+
+      doc.save('caro-bastiano-festivales.pdf');
+    });
   </script>
+
 </body>
 </html>
