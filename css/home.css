@@ -22,7 +22,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  /* Efecto Ken Burns muy sutil */
+  /* Efecto Ken Burns sutil */
   animation: kenBurns 20s ease-in-out infinite alternate;
 }
 
@@ -32,18 +32,9 @@
 }
 
 
-.hero__fondo-placeholder {
-  width: 100%;
-  height: 100%;
-  background-color: #0d0d12;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
+/* Dudas sobre el efecto gradient, funciona en la parte inferior + ayuda en transicionar al apartado de abajo, pero oscurece demasiado a la propia imagen de fondo
 
-
-.hero__gradiente {
+ .hero__gradiente {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -55,7 +46,7 @@
       rgba(8, 8, 8, 0.65) 75%,
       rgba(8, 8, 8, 0.95) 100%
     );
-}
+} */
 
 .hero__contenido {
   position: relative;

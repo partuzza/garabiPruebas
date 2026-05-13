@@ -27,7 +27,7 @@
   <!-- NAVBAR (modo claro)  -->
   <nav class="navbar navbar--clara" id="navbar" aria-label="Navegación principal">
 
-    <a href="index.html" class="navbar__logo" aria-label="Garabi Films — Inicio">
+    <a href="main.html" class="navbar__logo" aria-label="Garabi Films — Inicio">
       <img src="/img/GarabiFilms/GarabiFilmsLogo.jpg" alt="Garabi Films" class="navbar__logo-img">
       <span class="navbar__logo-texto">Garabi Films</span>
     </a>
@@ -68,7 +68,7 @@
       <p class="catalogo-header__sup">Garabi Films</p>
       <h1 class="catalogo-header__titulo">Catálogo</h1>
       <p class="catalogo-header__subtitulo">
-        Largometrajes, cortometrajes y series producidas desde 2012.
+        Largometrajes, cortometrajes y series producidas desde 2022.
       </p>
     </div>
   </header>
@@ -99,9 +99,9 @@
         </button>
       </div>
 
-      <!-- Contador de resultados (lo actualiza el JS) -->
+      <!-- Contador de resultados (se actualiza con JS) -->
       <p class="filtros__contador" id="contador-peliculas" aria-live="polite">
-        <span id="num-resultados">6</span> producciones
+        <span id="num-resultados">4</span> producciones
       </p>
     </div>
   </section>
@@ -116,7 +116,7 @@
           <a href="peliculas/caro-bastiano.html" class="pelicula-card__enlace"
              aria-label="Caro Bastiano — Largometraje 2024">
             <div class="pelicula-card__imagen-wrap">
-              <img src="/img/CB/CaroBastianoPoster1.jpg" alt="Garabi Films" class="navbar__logo-img">
+              <img src="/img/CB/CaroBastianoPoster2.jpg" alt="caro-bastiano" class="navbar__fotograma-img">
               <div class="pelicula-card__imagen-placeholder"
                    style="background: #1a1a2e;" aria-hidden="true"></div>
               <div class="pelicula-card__overlay" aria-hidden="true"></div>
@@ -136,6 +136,7 @@
           <a href="peliculas/ejemplo2.html" class="pelicula-card__enlace"
              aria-label="Ejemplo2 — Cortometraje 2026">
             <div class="pelicula-card__imagen-wrap">
+              <img src="/img/KRML/KarmeleFotogramas/KARMELE-5_DAVID HERRANZ.jpg" alt="ejemplo2" class="navbar__fotograma-img">
               <div class="pelicula-card__imagen-placeholder"
                    style="background: #1e2a1a;" aria-hidden="true"></div>
               <div class="pelicula-card__overlay" aria-hidden="true"></div>
@@ -155,7 +156,7 @@
           <a href="peliculas/zeru-ahoak.html" class="pelicula-card__enlace"
              aria-label="Zeru Ahoak — Serie 2025">
             <div class="pelicula-card__imagen-wrap">
-              <img src="/img/ZA/zeru-ahoak-poster.jpg" alt="Garabi Films" class="navbar__logo-img">
+              <img src="/img/ZA/zeru-ahoak-poster.jpg" alt="zeru-ahoak" class="navbar_fotograma-img">
               <div class="pelicula-card__imagen-placeholder"
                    style="background: #2a1a1a;" aria-hidden="true"></div>
               <div class="pelicula-card__overlay" aria-hidden="true"></div>
@@ -175,6 +176,7 @@
           <a href="peliculas/azken-agurra.html" class="pelicula-card__enlace"
              aria-label="Azken Agurra — Largometraje 2019">
             <div class="pelicula-card__imagen-wrap">
+              <img src="/img/AA/Azken_Agurra_preview.jpg" alt="azken-agurra-preview" class="navbar__fotograma-img">
               <div class="pelicula-card__imagen-placeholder"
                    style="background: #2a1e0a;" aria-hidden="true"></div>
               <div class="pelicula-card__overlay" aria-hidden="true"></div>
@@ -184,25 +186,6 @@
               <h2 class="pelicula-card__titulo">Azken Agurra</h2>
               <p class="pelicula-card__meta">
                 2026 &nbsp;·&nbsp; Koldo Almandoz &nbsp;·&nbsp; 90 min.
-              </p>
-            </div>
-          </a>
-        </article>
-
-        <!-- Card 5 -->
-        <article class="pelicula-card" data-categoria="cortometraje">
-          <a href="peliculas/ejemplo5.html" class="pelicula-card__enlace"
-             aria-label="Ejemplo5 — Cortometraje 2026">
-            <div class="pelicula-card__imagen-wrap">
-              <div class="pelicula-card__imagen-placeholder"
-                   style="background: #0a1a2a;" aria-hidden="true"></div>
-              <div class="pelicula-card__overlay" aria-hidden="true"></div>
-              <span class="pelicula-card__categoria-badge">Cortometraje</span>
-            </div>
-            <div class="pelicula-card__info">
-              <h2 class="pelicula-card__titulo">Ejemplo5</h2>
-              <p class="pelicula-card__meta">
-                2026 &nbsp;·&nbsp; Nombre Apellido &nbsp;·&nbsp; 25 min.
               </p>
             </div>
           </a>
@@ -255,6 +238,75 @@
       <p class="footer__credito">Diseño y desarrollo web</p>
     </div>
   </footer>
+
+  <!-- JAVASCRIPT utilizado para el filtro de contenidos -->
+  <script>
+    const botones   = document.querySelectorAll('.filtros__btn');
+    const cards     = document.querySelectorAll('.pelicula-card');
+    const contador  = document.getElementById('num-resultados');
+    const msgVacio  = document.getElementById('catalogo-vacio');
+
+    botones.forEach(btn => {
+      btn.addEventListener('click', () => {
+
+        /* 1. Actualizar botón activo */
+        botones.forEach(b => {
+          b.classList.remove('activo');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('activo');
+        btn.setAttribute('aria-pressed', 'true');
+
+        const filtro = btn.dataset.filtro;
+        let visibles = 0;
+
+        /* 2. Mostrar / ocultar cards con animación */
+        cards.forEach(card => {
+          const coincide = filtro === 'todos' || card.dataset.categoria === filtro;
+
+          if (coincide) {
+            card.style.display = '';
+            /* Pequeña animación al aparecer */
+            card.style.animation = 'none';
+            card.offsetHeight;   /* forzar reflow */
+            card.style.animation = 'fadeInCard 0.35s ease forwards';
+            visibles++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        /* 3. Actualizar contador */
+        contador.textContent = visibles;
+
+        /* 4. Mensaje si no hay resultados */
+        msgVacio.style.display = visibles === 0 ? 'block' : 'none';
+      });
+    });
+
+    /* Menú móvil */
+    const btnH = document.getElementById('btn-hamburguesa');
+    const btnC = document.getElementById('btn-cerrar-menu');
+    const menu = document.getElementById('menu-movil');
+
+    btnH.addEventListener('click', () => {
+      menu.classList.add('abierto');
+      btnH.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    });
+    btnC.addEventListener('click', () => {
+      menu.classList.remove('abierto');
+      btnH.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        menu.classList.remove('abierto');
+        btnH.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
 
 </body>
 </html>
