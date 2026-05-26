@@ -485,3 +485,169 @@
     flex-direction: column;
   }
 }
+
+/* PERFILES DEL EQUIPO
+   Dos paneles horizontales entre la cabecera y el formulario.
+   Cada panel es un enlace a la página de perfil individual.
+   Inspirado en el layout de Txintxua Films:
+   imagen a pantalla completa, nombre abajo izq, rol abajo der. */
+
+.equipo-perfiles {
+  display: grid;
+  /* Dos columnas iguales a pantalla completa */
+  grid-template-columns: 1fr 1fr;
+  /* Sin gap: los paneles se tocan, efecto de díptico */
+  gap: 0;
+  /* Altura generosa — ocupa buena parte de la pantalla */
+  height: 70vh;
+  min-height: 420px;
+  max-height: 640px;
+}
+
+/* Cada panel es un <a> que ocupa todo su espacio */
+.perfil-panel {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  /* El cursor de enlace deja claro que es clickable */
+  cursor: pointer;
+}
+
+/* Imagen o color de fondo */
+.perfil-panel__fondo {
+  position: absolute;
+  inset: 0;
+  /* La imagen se aplica inline en el HTML como background-image
+     o se añade un <img> dentro con la clase .perfil-panel__imagen */
+}
+
+/* Imagen real dentro del panel */
+.perfil-panel__imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  /* Filtro B&N sutil — quitar si prefieres color */
+  filter: grayscale(30%);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.4s ease;
+}
+
+/* Zoom suave al hacer hover sobre la imagen */
+.perfil-panel:hover .perfil-panel__imagen {
+  transform: scale(1.03);
+  filter: grayscale(0%);
+}
+
+/* Gradiente oscuro: solo en la parte inferior
+   para que el texto siempre sea legible */
+.perfil-panel__gradiente {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(8, 8, 8, 0.55) 75%,
+    rgba(8, 8, 8, 0.88) 100%
+  );
+  /* Transición: el gradiente se intensifica al hacer hover */
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+
+.perfil-panel:hover .perfil-panel__gradiente {
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(8, 8, 8, 0.65) 70%,
+    rgba(8, 8, 8, 0.95) 100%
+  );
+}
+
+/* Datos: nombre y rol alineados en la parte inferior */
+.perfil-panel__datos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: var(--gap-lg) var(--gap-lg) var(--gap-md);
+  gap: var(--gap-sm);
+}
+
+/* Nombre en mayúsculas, grande, izquierda */
+.perfil-panel__nombre {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-md);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blanco);
+  line-height: 1.2;
+  /* Transición de opacidad al hover */
+  transition: opacity var(--trans-rapida);
+}
+
+/* Rol en minúsculas, pequeño, derecha */
+.perfil-panel__rol {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: rgba(245, 243, 239, 0.65);
+  white-space: nowrap;
+  transition: color var(--trans-rapida);
+}
+
+/* Al hacer hover: nombre más brillante, rol más visible */
+.perfil-panel:hover .perfil-panel__nombre {
+  opacity: 0.9;
+}
+
+.perfil-panel:hover .perfil-panel__rol {
+  color: rgba(245, 243, 239, 0.85);
+}
+
+/* Línea divisoria vertical entre los dos paneles */
+.perfil-panel:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Responsive
+   En tablet y móvil los dos paneles se apilan verticalmente  */
+@media (max-width: 768px) {
+  .equipo-perfiles {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+  }
+
+  .perfil-panel {
+    height: 50vw;
+    min-height: 260px;
+    max-height: 380px;
+    display: block;
+  }
+
+  .perfil-panel:first-child {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .perfil-panel__datos {
+    padding: var(--gap-md) var(--gap-md) var(--gap-sm);
+  }
+
+  .perfil-panel__nombre {
+    font-size: var(--text-sm);
+    letter-spacing: 0.1em;
+  }
+
+  .perfil-panel__rol {
+    font-size: var(--text-xs);
+  }
+}

@@ -13,8 +13,7 @@
   <link rel="alternate" hreflang="en" href="https://www.garabifilms.eus/en/contact.html">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css">
@@ -28,7 +27,7 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar--clara" id="navbar" aria-label="Navegación principal">
     <a href="main.html" class="navbar__logo" aria-label="Garabi Films — Inicio">
-      <img src="/img/GarabiFilms/GarabiLogoPENEJE.png" alt="Garabi Films" class="navbar__logo-img">
+      <img src="/img/GarabiFilms/GarabiFilmsLogo.jpg" alt="Garabi Films" class="navbar__logo-img">
       <span class="navbar__logo-texto">Garabi Films</span>
     </a>
 
@@ -73,38 +72,50 @@
     </div>
   </header>
 
+  <!-- PERFILES DEL EQUIPO -->
+  <section class="equipo-perfiles" aria-label="Equipo de Garabi Films">
+    <a href="equipo/marian-fernandez.html"
+       class="perfil-panel"
+       aria-label="Ver perfil de Marian Fernández Pascal">
+      <div class="perfil-panel__fondo"
+           style="background-color: #1a1a1a;"
+           aria-hidden="true">
+      </div>
+      <div class="perfil-panel__gradiente" aria-hidden="true"></div>
+      <div class="perfil-panel__datos">
+        <span class="perfil-panel__nombre">Marian Fernández Pascal</span>
+        <span class="perfil-panel__rol">Productora</span>
+      </div>
+    </a>
+
+    <a href="equipo/koldo-almandoz.html"
+       class="perfil-panel"
+       aria-label="Ver perfil de Koldo Almandoz">
+      <div class="perfil-panel__fondo"
+           style="background-color: #111111;"
+           aria-hidden="true">
+      </div>
+      <div class="perfil-panel__gradiente" aria-hidden="true"></div>
+      <div class="perfil-panel__datos">
+        <span class="perfil-panel__nombre">Koldo Almandoz</span>
+        <span class="perfil-panel__rol">Director y Guionista</span>
+      </div>
+    </a>
+  </section>
+
   <main>
     <div class="contacto-cuerpo contenedor">
-
       <!--  COLUMNA IZQUIERDA: Formulario  -->
       <section class="contacto-formulario-wrap" aria-label="Formulario de contacto">
         <h2 class="contacto-seccion__titulo">Escríbenos</h2>
-        <form
-          class="contacto-form"
-          id="formulario-contacto"
-          action="https://formspree.io/f/TU_ID_FORMSPREE"
-          method="POST"
-          novalidate
-          aria-label="Formulario de contacto">
-
-          <!-- Campo oculto: idioma del formulario-->
+        <form class="contacto-form" id="formulario-contacto" action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST" novalidate aria-label="Formulario de contacto">
           <input type="hidden" name="_language" value="es">
-          <!-- Asunto del email que recibirás -->
           <input type="hidden" name="_subject" value="Contacto desde garabifilms.eus">
-
           <div class="form-grupo">
             <label class="form-etiqueta" for="nombre">
               Nombre <span class="form-requerido" aria-hidden="true">*</span>
             </label>
-            <input
-              class="form-campo"
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Tu nombre completo"
-              required
-              autocomplete="name"
-              aria-required="true">
+            <input class="form-campo" type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required autocomplete="name" aria-required="true">
             <span class="form-error" id="error-nombre" role="alert"></span>
           </div>
 
@@ -112,15 +123,7 @@
             <label class="form-etiqueta" for="email">
               Email <span class="form-requerido" aria-hidden="true">*</span>
             </label>
-            <input
-              class="form-campo"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="tu@email.com"
-              required
-              autocomplete="email"
-              aria-required="true">
+            <input class="form-campo" type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email" aria-required="true">
             <span class="form-error" id="error-email" role="alert"></span>
           </div>
 
@@ -141,13 +144,7 @@
               Mensaje <span class="form-requerido" aria-hidden="true">*</span>
             </label>
             <textarea
-              class="form-campo form-textarea"
-              id="mensaje"
-              name="mensaje"
-              placeholder="Cuéntanos en qué podemos ayudarte..."
-              required
-              rows="6"
-              aria-required="true"></textarea>
+              class="form-campo form-textarea" id="mensaje" name="mensaje" placeholder="Cuéntanos en qué podemos ayudarte..." required rows="6" aria-required="true"></textarea>
             <span class="form-error" id="error-mensaje" role="alert"></span>
           </div>
 
@@ -180,7 +177,6 @@
             Ha habido un error. Inténtalo de nuevo o escríbenos directamente a
             <a href="mailto:hola@garabifilms.eus">hola@garabifilms.eus</a>.
           </div>
-
         </form>
       </section>
 
@@ -190,14 +186,12 @@
         <!-- Equipo -->
         <section aria-label="Equipo">
           <h2 class="contacto-seccion__titulo">Equipo</h2>
-
           <div class="equipo-lista">
-
             <article class="equipo-card">
               <div class="equipo-card__foto-placeholder" aria-hidden="true"></div>
               <div class="equipo-card__info">
                 <h3 class="equipo-card__nombre">Marian Fernández Pascal</h3>
-                <p class="equipo-card__rol">Productora??</p>
+                <p class="equipo-card__rol">Productora</p>
                 <a href="mailto:garabifilms@gmail.com" class="equipo-card__email">
                   garabifilms@gmail.com
                 </a>
@@ -214,14 +208,12 @@
                 </a>
               </div>
             </article>
-
           </div>
         </section>
 
         <!-- Datos de la productora -->
         <section class="contacto-datos" aria-label="Datos de la empresa">
           <h2 class="contacto-seccion__titulo">Productora</h2>
-
           <address class="contacto-datos__bloque" style="font-style:normal;">
             <p class="contacto-datos__nombre">Garabi Films S.L.</p>
             <p class="contacto-datos__linea">
@@ -240,31 +232,22 @@
 
           <!-- Redes sociales -->
           <div class="contacto-redes">
-            <a href="https://www.instagram.com/garabifilms"
-               class="contacto-red" target="_blank" rel="noopener noreferrer"
-               aria-label="Instagram de Garabi Films">
+            <a href="https://www.instagram.com/garabifilms" class="contacto-red" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Garabi Films">
               <i class="fa-brands fa-instagram" aria-hidden="true"></i>
               Instagram
             </a>
-            <a href="https://vimeo.com/garabifilms"
-               class="contacto-red" target="_blank" rel="noopener noreferrer"
-               aria-label="Vimeo de Garabi Films">
+            <a href="https://vimeo.com/garabifilms" class="contacto-red" target="_blank" rel="noopener noreferrer" aria-label="Vimeo de Garabi Films">
               <i class="fa-brands fa-vimeo-v" aria-hidden="true"></i>
               Vimeo
             </a>
-            <a href="https://www.facebook.com/garabifilms"
-               class="contacto-red" target="_blank" rel="noopener noreferrer"
-               aria-label="Facebook de Garabi Films">
+            <a href="https://www.facebook.com/garabifilms" class="contacto-red" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Garabi Films">
               <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
               Facebook
             </a>
           </div>
         </section>
-
       </aside>
-
     </div>
-    <!-- /contacto-cuerpo -->
   </main>
 
   <!-- FOOTER  -->
@@ -280,12 +263,9 @@
       <div class="footer__col">
         <p class="footer__titulo-col">Síguenos</p>
         <nav class="footer__redes" aria-label="Redes sociales">
-          <a href="https://www.instagram.com/garabifilms" class="footer__red"
-             target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://vimeo.com/garabifilms" class="footer__red"
-             target="_blank" rel="noopener noreferrer">Vimeo</a>
-          <a href="https://www.facebook.com/garabifilms" class="footer__red"
-             target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/garabifilms" class="footer__red" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://vimeo.com/garabifilms" class="footer__red" target="_blank" rel="noopener noreferrer">Vimeo</a>
+          <a href="https://www.facebook.com/garabifilms" class="footer__red" target="_blank" rel="noopener noreferrer">Facebook</a>
         </nav>
       </div>
       <div class="footer__col">
@@ -303,6 +283,5 @@
       <p class="footer__credito">Diseño y desarrollo web</p>
     </div>
   </footer>
-
 </body>
 </html>
