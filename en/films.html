@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en"
+      data-i18n-title="title.home"
+      data-i18n-meta="meta.desc.home">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de producciones de Garabi Films — Largometrajes, cortometrajes y series.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Hreflang multiidioma -->
+  <link rel="alternate" hreflang="es" href="https://www.garabifilms.eus/es/peliculas.html">
+  <link rel="alternate" hreflang="eu" href="https://www.garabifilms.eus/eu/filmak.html">
+  <link rel="alternate" hreflang="en" href="https://www.garabifilms.eus/en/films.html">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/catalogo.css">
+
+  <title>Películas — Garabi Films</title>
+</head>
+
+<body class="pagina-clara">
+
+  <!-- NAVBAR (modo claro)  -->
+  <nav class="navbar navbar--clara" id="navbar" aria-label="Navegación principal">
+
+    <a href="main.html" class="navbar__logo" aria-label="Garabi Films — Inicio">
+      <img src="/img/GarabiFilms/GarabiLogoPENEJE.png" alt="Garabi Films" class="navbar__logo-img">
+      <span class="navbar__logo-texto">Garabi Films</span>
+    </a>
+
+    <ul class="navbar__menu" role="list">
+      <li>
+        <a href="films.html" class="navbar__enlace activo" aria-current="page">Películas</a>
+      </li>
+      <li>
+        <a href="contact.html" class="navbar__enlace">Contacto</a>
+      </li>
+    </ul>
+
+    <div class="navbar__idiomas" aria-label="Selección de idioma">
+      <a href="../eu/filmak.html"    class="navbar__idioma"        hreflang="eu">EU</a>
+      <a href="../es/peliculas.html" class="navbar__idioma activo" hreflang="es" aria-current="true">ES</a>
+      <a href="../en/films.html"     class="navbar__idioma"        hreflang="en">EN</a>
+    </div>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="navbar__menu-movil" id="menu-movil" role="dialog" aria-label="Menú de navegación">
+    <button class="menu-movil__cerrar" id="btn-cerrar-menu" aria-label="Cerrar menú">✕</button>
+    <ul role="list">
+      <li><a href="films.html" class="navbar__enlace">Películas</a></li>
+      <li><a href="contact.html"  class="navbar__enlace">Contacto</a></li>
+    </ul>
+    <div class="navbar__idiomas">
+      <a href="../eu/filmak.html"    class="navbar__idioma" hreflang="eu">EU</a>
+      <a href="../es/peliculas.html" class="navbar__idioma activo" hreflang="es">ES</a>
+      <a href="../en/films.html"     class="navbar__idioma" hreflang="en">EN</a>
+    </div>
+  </div>
+
+  <!-- CABECERA DE SECCIÓN  -->
+  <header class="catalogo-header">
+    <div class="contenedor">
+      <p class="catalogo-header__sup">Garabi Films</p>
+      <h1 class="catalogo-header__titulo">Catálogo</h1>
+      <p class="catalogo-header__subtitulo">
+        Largometrajes, cortometrajes y series producidas desde 2022.
+      </p>
+    </div>
+  </header>
+
+  <!-- FILTROS  -->
+  <section class="filtros" aria-label="Filtrar catálogo">
+    <div class="contenedor">
+      <div class="filtros__grupo" role="group" aria-label="Categorías">
+        <button class="filtros__btn activo"
+                data-filtro="todos"
+                aria-pressed="true">
+          Todos
+        </button>
+        <button class="filtros__btn"
+                data-filtro="largometraje"
+                aria-pressed="false">
+          Largometrajes
+        </button>
+        <button class="filtros__btn"
+                data-filtro="cortometraje"
+                aria-pressed="false">
+          Cortometrajes
+        </button>
+        <button class="filtros__btn"
+                data-filtro="serie"
+                aria-pressed="false">
+          Series
+        </button>
+      </div>
+
+      <!-- Contador de resultados (se actualiza con JS) -->
+      <p class="filtros__contador" id="contador-peliculas" aria-live="polite">
+        <span id="num-resultados">4</span> producciones
+      </p>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO  -->
+  <main class="catalogo" id="catalogo">
+    <div class="contenedor">
+      <div class="catalogo__grid" id="grid-peliculas">
+
+        <!-- Card 1 -->
+        <article class="pelicula-card" data-categoria="largometraje">
+          <a href="films/caro-bastiano.html" class="pelicula-card__enlace"
+             aria-label="Caro Bastiano — Largometraje 2024">
+            <div class="pelicula-card__imagen-wrap">
+              <img src="/img/CB/CaroBastianoPoster2.jpg" alt="caro-bastiano" class="navbar__fotograma-img">
+              <div class="pelicula-card__imagen-placeholder"
+                   style="background: #1a1a2e;" aria-hidden="true"></div>
+              <div class="pelicula-card__overlay" aria-hidden="true"></div>
+              <span class="pelicula-card__categoria-badge">Largometraje</span>
+            </div>
+            <div class="pelicula-card__info">
+              <h2 class="pelicula-card__titulo">Caro Bastiano</h2>
+              <p class="pelicula-card__meta">
+                2026 &nbsp;·&nbsp; Maria Elorza &nbsp;·&nbsp; 80 min.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="pelicula-card" data-categoria="cortometraje">
+          <a href="films/ejemplo2" class="pelicula-card__enlace"
+             aria-label="Ejemplo2 — Cortometraje 2026">
+            <div class="pelicula-card__imagen-wrap">
+              <img src="/img/KRML/KarmeleFotogramas/KARMELE-5_DAVID HERRANZ.jpg" alt="ejemplo2" class="navbar__fotograma-img">
+              <div class="pelicula-card__imagen-placeholder"
+                   style="background: #1e2a1a;" aria-hidden="true"></div>
+              <div class="pelicula-card__overlay" aria-hidden="true"></div>
+              <span class="pelicula-card__categoria-badge">Cortometraje</span>
+            </div>
+            <div class="pelicula-card__info">
+              <h2 class="pelicula-card__titulo">Ejemplo2</h2>
+              <p class="pelicula-card__meta">
+                2026 &nbsp;·&nbsp; Nombre Apellido &nbsp;·&nbsp; 15 min
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="pelicula-card" data-categoria="serie">
+          <a href="films/zeru-ahoak.html" class="pelicula-card__enlace"
+             aria-label="Zeru Ahoak — Serie 2025">
+            <div class="pelicula-card__imagen-wrap">
+              <img src="/img/ZA/zeru-ahoak-poster.jpg" alt="zeru-ahoak" class="navbar_fotograma-img">
+              <div class="pelicula-card__imagen-placeholder"
+                   style="background: #2a1a1a;" aria-hidden="true"></div>
+              <div class="pelicula-card__overlay" aria-hidden="true"></div>
+              <span class="pelicula-card__categoria-badge">Serie</span>
+            </div>
+            <div class="pelicula-card__info">
+              <h2 class="pelicula-card__titulo">Zeru Ahoak</h2>
+              <p class="pelicula-card__meta">
+                2025 &nbsp;·&nbsp; Koldo Almandoz &nbsp;·&nbsp; 4 ep.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="pelicula-card" data-categoria="largometraje">
+          <a href="films/azken-agurra.html" class="pelicula-card__enlace"
+             aria-label="Azken Agurra — Largometraje 2019">
+            <div class="pelicula-card__imagen-wrap">
+              <img src="/img/AA/Azken_Agurra_preview.jpg" alt="azken-agurra-preview" class="navbar__fotograma-img">
+              <div class="pelicula-card__imagen-placeholder"
+                   style="background: #2a1e0a;" aria-hidden="true"></div>
+              <div class="pelicula-card__overlay" aria-hidden="true"></div>
+              <span class="pelicula-card__categoria-badge">Largometraje</span>
+            </div>
+            <div class="pelicula-card__info">
+              <h2 class="pelicula-card__titulo">Azken Agurra</h2>
+              <p class="pelicula-card__meta">
+                2026 &nbsp;·&nbsp; Koldo Almandoz &nbsp;·&nbsp; 90 min.
+              </p>
+            </div>
+          </a>
+        </article>
+
+      </div>
+
+      <!-- Mensaje cuando el filtro no da resultados -->
+      <p class="catalogo__vacio" id="catalogo-vacio" aria-live="polite">
+        No hay producciones en esta categoría.
+      </p>
+
+    </div>
+  </main>
+
+  <!-- FOOTER  -->
+  <footer class="footer footer--clara" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <p class="footer__logo-texto">Garabi Films</p>
+        <p class="footer__descripcion">
+          Productora audiovisual vasca fundada en 2012.
+          Cine de autor desde el País Vasco.
+        </p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__titulo-col">Síguenos</p>
+        <nav class="footer__redes" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/garabifilms" class="footer__red"
+             target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://vimeo.com/garabifilms" class="footer__red"
+             target="_blank" rel="noopener noreferrer">Vimeo</a>
+          <a href="https://www.facebook.com/garabifilms" class="footer__red"
+             target="_blank" rel="noopener noreferrer">Facebook</a>
+        </nav>
+        </div>
+      <div class="footer__col">
+        <p class="footer__titulo-col">Contacto</p>
+        <address class="footer__contacto-item" style="font-style: normal;">
+          <a href="mailto:garabifilms@gmail.com">garabifilms@gmail.com</a><br>
+          SAN PEDRO, 19 - 2<br>
+          20110 PASAIA
+          Gipuzkoa, Euskadi
+        </address>
+      </div>
+
+    </div>
+    <div class="footer__barra">
+      <p class="footer__copyright">© 2026 Garabi Films S.L. Todos los derechos reservados.</p>
+      <p class="footer__credito">Diseño y desarrollo web</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT utilizado para el filtro de contenidos -->
+  <script src="/js/i18n.js"></script>
+
+  <script>
+    const botones   = document.querySelectorAll('.filtros__btn');
+    const cards     = document.querySelectorAll('.pelicula-card');
+    const contador  = document.getElementById('num-resultados');
+    const msgVacio  = document.getElementById('catalogo-vacio');
+
+    botones.forEach(btn => {
+      btn.addEventListener('click', () => {
+
+        /* 1. Actualizar botón activo */
+        botones.forEach(b => {
+          b.classList.remove('activo');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('activo');
+        btn.setAttribute('aria-pressed', 'true');
+
+        const filtro = btn.dataset.filtro;
+        let visibles = 0;
+
+        /* 2. Mostrar / ocultar cards con animación */
+        cards.forEach(card => {
+          const coincide = filtro === 'todos' || card.dataset.categoria === filtro;
+
+          if (coincide) {
+            card.style.display = '';
+            /* Pequeña animación al aparecer */
+            card.style.animation = 'none';
+            card.offsetHeight;   /* forzar reflow */
+            card.style.animation = 'fadeInCard 0.35s ease forwards';
+            visibles++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        /* 3. Actualizar contador */
+        contador.textContent = visibles;
+
+        /* 4. Mensaje si no hay resultados */
+        msgVacio.style.display = visibles === 0 ? 'block' : 'none';
+      });
+    });
+
+    /* Menú móvil */
+    const btnH = document.getElementById('btn-hamburguesa');
+    const btnC = document.getElementById('btn-cerrar-menu');
+    const menu = document.getElementById('menu-movil');
+
+    btnH.addEventListener('click', () => {
+      menu.classList.add('abierto');
+      btnH.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    });
+    btnC.addEventListener('click', () => {
+      menu.classList.remove('abierto');
+      btnH.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        menu.classList.remove('abierto');
+        btnH.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+
+</body>
+</html>

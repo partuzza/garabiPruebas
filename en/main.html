@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"
+      data-i18n-title="title.home"
+      data-i18n-meta="meta.desc.home">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Garabi Films — Productora audiovisual vasca. Cine de autor desde el País Vasco.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title"       content="Garabi Films">
+  <meta property="og:description" content="Productora audiovisual vasca. Cine de autor desde el País Vasco.">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.garabifilms.eus/es/">
+
+  <link rel="alternate" hreflang="es" href="https://www.garabifilms.eus/es/">
+  <link rel="alternate" hreflang="eu" href="https://www.garabifilms.eus/eu/">
+  <link rel="alternate" hreflang="en" href="https://www.garabifilms.eus/en/">
+  <link rel="alternate" hreflang="x-default" href="https://www.garabifilms.eus/es/">
+
+  <!-- Font Awesome (iconos) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/home.css">
+
+  <title>Garabi Films</title>
+</head>
+
+<body class="home">
+  <nav class="navbar" id="navbar" aria-label="Navegación principal">
+    <a href="/index.html" class="navbar__logo" aria-label="Garabi Films — Inicio">
+      <img src="/img/GarabiFilms/GarabiLogoBlanco.png" alt="Garabi Films" class="navbar__logo-img">
+      <span class="navbar__logo-texto">Garabi Films</span>
+    </a>
+
+    <ul class="navbar__menu" role="list">
+      <li>
+        <a href="films.html" class="navbar__enlace">Películas</a>
+      </li>
+      <li>
+        <a href="contact.html" class="navbar__enlace">Contacto</a>
+      </li>
+    </ul>
+
+    <div class="navbar__idiomas" aria-label="Selección de idioma">
+      <a href="../eu/main.html" class="navbar__idioma" lang="eu" hreflang="eu">EU</a>
+      <a href="../es/main.html" class="navbar__idioma activo" lang="es" hreflang="es" aria-current="true">ES</a>
+      <a href="../en/main.html" class="navbar__idioma" lang="en" hreflang="en">EN</a>
+    </div>
+  </nav>
+
+  <div class="navbar__menu-movil" id="menu-movil" role="dialog" aria-label="Menú de navegación">
+    <ul role="list">
+      <li><a href="films.html" class="navbar__enlace">Películas</a></li>
+      <li><a href="contact.html" class="navbar__enlace">Contacto</a></li>
+    </ul>
+    <div class="navbar__idiomas">
+      <a href="../eu/main.html" class="navbar__idioma" hreflang="eu">EU</a>
+      <a href="../es/main.html" class="navbar__idioma activo" hreflang="es">ES</a>
+      <a href="../en/main.html" class="navbar__idioma" hreflang="en">EN</a>
+    </div>
+  </div>
+
+  <!-- HERO: Obra destacada a pantalla completa -->
+  <main>
+    <section class="hero" aria-label="Obra destacada">
+      <div class="hero__fondo" aria-hidden="true">
+        <div class="hero__fondo-placeholder"></div>
+        <img src="../img/KRML/KarmeleFotogramas/KARMELE_DAVID HERRANZ.jpg"
+               alt="karmele"
+               class="hero__imagen"
+               loading="eager">
+      </div>
+
+      <div class="hero__gradiente" aria-hidden="true"></div>
+
+      <div class="hero__contenido">
+
+        <!-- Parte superior: etiqueta -->
+        <div class="hero__etiqueta animar-entrada animar-entrada--delay-1">
+          <span class="hero__etiqueta-texto">Obra destacada</span>
+        </div>
+
+        <!-- Título de la película -->
+        <h1 class="hero__titulo animar-entrada animar-entrada--delay-2">
+          KARMELE
+        </h1>
+
+        <!-- Subtítulo: director y año -->
+        <p class="hero__subtitulo animar-entrada animar-entrada--delay-3">
+          Una película de <em>Asier Altuna</em> &nbsp;·&nbsp; 2025
+        </p>
+
+        <div class="hero__separador animar-entrada animar-entrada--delay-3"></div>
+
+        <div class="hero__festivales animar-entrada animar-entrada--delay-4"
+             aria-label="Festivales">
+
+          <span class="hero__festival-texto">Festival Ejemplo</span>
+          <span class="hero__festival-separador" aria-hidden="true">·</span>
+          <span class="hero__festival-texto">Festival Ejemplo</span>
+          <span class="hero__festival-separador" aria-hidden="true">·</span>
+          <span class="hero__festival-texto">Festival Ejemplo</span>
+        </div>
+
+        <a href="films/zeru-ahoak.html"
+           class="hero__cta animar-entrada animar-entrada--delay-4"
+           aria-label="Ver ficha completa de Ejemplo1">
+          <span>Ver ficha</span>
+          <span class="hero__cta-icono" aria-hidden="true">→</span>
+        </a>
+
+      </div>
+
+      <div class="hero__scroll-indicador" aria-hidden="true">
+        <span class="hero__scroll-linea"></span>
+        <span class="hero__scroll-texto">Scroll</span>
+      </div>
+
+    </section>
+
+     <!-- Últimas Producciones -->
+    <section class="ultimas" aria-label="Últimas producciones">
+      <div class="contenedor">
+
+        <header class="ultimas__cabecera">
+          <h2 class="ultimas__titulo">Últimas producciones</h2>
+          <a href="films.html" class="ultimas__ver-todo">
+            Ver catálogo completo →
+          </a>
+        </header>
+
+        <div class="ultimas__grid" role="list">
+
+          <!-- Card 1 -->
+          <article class="pelicula-card" role="listitem">
+            <a href="films/caro-bastiano.html" class="pelicula-card__enlace"
+               aria-label="Caro Bastiano, largometraje de 2026">
+              <div class="pelicula-card__imagen-wrap">
+                <img src="../img/CB/CaroBastianoPoster2.jpg"
+                     alt="Poster de Caro Bastiano"
+                     class="pelicula-card__imagen">
+                <div class="pelicula-card__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="pelicula-card__info">
+                <span class="etiqueta">Largometraje</span>
+                <h3 class="pelicula-card__titulo">Caro Bastiano</h3>
+                <p class="pelicula-card__meta">2026 &nbsp;·&nbsp; Maria Elorza</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="pelicula-card" role="listitem">
+            <a href="films/azken-agurra.html class="pelicula-card__enlace"
+               aria-label="Azken Agurra, largometraje de 2026">
+              <div class="pelicula-card__imagen-wrap">
+                <img src="../img/AA/Azken_Agurra_preview.jpg"
+                     alt="Poster de Azken Agurra"
+                     class="pelicula-card__imagen">
+                <div class="pelicula-card__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="pelicula-card__info">
+                <span class="etiqueta">Largometraje</span>
+                <h3 class="pelicula-card__titulo">Azken Agurra</h3>
+                <p class="pelicula-card__meta">2026 &nbsp;·&nbsp; Koldo Almandoz</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="pelicula-card" role="listitem">
+            <a href="films/zeru-ahoak.html" class="pelicula-card__enlace"
+               aria-label="Zeru Ahoak, serie de 2025">
+              <div class="pelicula-card__imagen-wrap">
+                <img src="/img/ZA/zeru-ahoak-poster.jpg"
+                     alt="Imagen de Zeru Ahoak"
+                     class="pelicula-card__imagen">
+                <div class="pelicula-card__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="pelicula-card__info">
+                <span class="etiqueta">Serie</span>
+                <h3 class="pelicula-card__titulo">Zeru Ahoak</h3>
+                <p class="pelicula-card__meta">2025 &nbsp;·&nbsp; Koldo Almandoz</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+
+      <div class="footer__col">
+        <p class="footer__logo-texto">Garabi Films</p>
+        <p class="footer__descripcion">Productora audiovisual vasca fundada en 2022.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__titulo-col">Síguenos</p>
+        <nav class="footer__redes" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/garabifilms"
+             class="footer__red"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Instagram de Garabi Films">
+            Instagram
+          </a>
+          <a href="https://vimeo.com/garabifilms"
+             class="footer__red"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Vimeo de Garabi Films">
+            Vimeo
+          </a>
+          <a href="https://www.facebook.com/garabifilms"
+             class="footer__red"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Facebook de Garabi Films">
+            Facebook
+          </a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__titulo-col">Contacto</p>
+        <address class="footer__contacto-item" style="font-style: normal;">
+          <a href="mailto:garabifilms@gmail.com">garabifilms@gmail.com</a><br>
+          SAN PEDRO, 19 - 2<br>
+          20110 PASAIA
+          Gipuzkoa, Euskadi
+        </address>
+      </div>
+
+    </div>
+
+    <div class="footer__barra">
+      <p class="footer__copyright">© 2026 Garabi Films S.L. Todos los derechos reservados.</p>
+      <p class="footer__credito">Diseño y desarrollo web</p>
+    </div>
+  </footer>
+
+  <script src="/js/i18n.js"></script>
+
+</body>
+</html>

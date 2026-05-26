@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en"
+      data-i18n-title="title.home"
+      data-i18n-meta="meta.desc.home">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,10 +35,10 @@
 
     <ul class="navbar__menu" role="list">
       <li>
-        <a href="peliculas.html" class="navbar__enlace">Películas</a>
+        <a href="films.html" class="navbar__enlace">Películas</a>
       </li>
       <li>
-        <a href="contacto.html" class="navbar__enlace activo" aria-current="page">Contacto</a>
+        <a href="contact.html" class="navbar__enlace activo" aria-current="page">Contacto</a>
       </li>
     </ul>
 
@@ -51,8 +53,8 @@
   <div class="navbar__menu-movil" id="menu-movil" role="dialog" aria-label="Menú de navegación">
     <button class="menu-movil__cerrar" id="btn-cerrar-menu" aria-label="Cerrar menú">✕</button>
     <ul role="list">
-      <li><a href="peliculas.html" class="navbar__enlace">Películas</a></li>
-      <li><a href="contacto.html"  class="navbar__enlace">Contacto</a></li>
+      <li><a href="films.html" class="navbar__enlace">Películas</a></li>
+      <li><a href="contact.html"  class="navbar__enlace">Contacto</a></li>
     </ul>
     <div class="navbar__idiomas">
       <a href="../eu/harremana.html" class="navbar__idioma" hreflang="eu">EU</a>
@@ -74,7 +76,7 @@
 
   <!-- PERFILES DEL EQUIPO -->
   <section class="equipo-perfiles" aria-label="Equipo de Garabi Films">
-    <a href="equipo/marian-fernandez.html"
+    <a href="team/marian-fernandez.html"
        class="perfil-panel"
        aria-label="Ver perfil de Marian Fernández Pascal">
       <div class="perfil-panel__fondo"
@@ -88,7 +90,7 @@
       </div>
     </a>
 
-    <a href="equipo/koldo-almandoz.html"
+    <a href="team/koldo-almandoz.html"
        class="perfil-panel"
        aria-label="Ver perfil de Koldo Almandoz">
       <div class="perfil-panel__fondo"
@@ -283,5 +285,7 @@
       <p class="footer__credito">Diseño y desarrollo web</p>
     </div>
   </footer>
+  <script src="/js/i18n.js"></script>
+  
 </body>
 </html>

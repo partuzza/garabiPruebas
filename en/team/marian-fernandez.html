@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en"
+      data-i18n-title="title.home"
+      data-i18n-meta="meta.desc.home">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,8 +35,8 @@
     </a>
 
     <ul class="navbar__menu" role="list">
-      <li><a href="../peliculas.html" class="navbar__enlace">Películas</a></li>
-      <li><a href="../contacto.html"  class="navbar__enlace activo">Contacto</a></li>
+      <li><a href="/en/films.html" class="navbar__enlace">Películas</a></li>
+      <li><a href="/en/contact.html"  class="navbar__enlace activo">Contacto</a></li>
     </ul>
 
     <div class="navbar__idiomas" aria-label="Selección de idioma">
@@ -53,8 +55,8 @@
   <div class="navbar__menu-movil" id="menu-movil" role="dialog" aria-label="Menú de navegación">
     <button class="menu-movil__cerrar" id="btn-cerrar-menu" aria-label="Cerrar menú">✕</button>
     <ul role="list">
-      <li><a href="../peliculas.html" class="navbar__enlace">Películas</a></li>
-      <li><a href="../contacto.html"  class="navbar__enlace">Contacto</a></li>
+      <li><a href="/en/films.html" class="navbar__enlace">Películas</a></li>
+      <li><a href="/en/contact.html"  class="navbar__enlace">Contacto</a></li>
     </ul>
     <div class="navbar__idiomas">
       <a href="../../eu/harremana/marian-fernandez.html" class="navbar__idioma" hreflang="eu">EU</a>
@@ -66,7 +68,7 @@
   <!-- CABECERA -->
   <header class="perfil-header">
     <div class="contenedor">
-      <a href="../contacto.html" class="perfil-header__volver">← Contacto</a>
+      <a href="/en/contact.html" class="perfil-header__volver">← Contacto</a>
       <p class="perfil-header__sup">Garabi Films · Equipo</p>
       <h1 class="perfil-header__titulo">Marian Fernández Pascal</h1>
       <p class="perfil-header__rol">Productora</p>
@@ -174,6 +176,7 @@
   </footer>
 
   <!-- JAVASCRIPT -->
+  <script src="/js/i18n.js"></script>
   <script>
     /* Menú móvil */
     const btnH = document.getElementById('btn-hamburguesa');
