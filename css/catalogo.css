@@ -1,17 +1,17 @@
 /* GARABI FILMS — catalogo.css
    Estilos específicos de catalogo.html*/
 
-/*Fondo general de la página */
+/*Fondo general de la página — oscuro cinematográfico */
 .pagina-clara {
-  background: var(--blanco-puro);
-  color: var(--negro);
+  background: var(--negro);
+  color: var(--blanco);
 }
 
 /* Cabecera de sección */
 .catalogo-header {
   padding: calc(var(--navbar-altura) + var(--gap-xl)) 0 var(--gap-lg);
-  background: var(--blanco-puro);
-  border-bottom: 1px solid #e8e8e4;
+  background: var(--negro);
+  border-bottom: 1px solid var(--gris-borde);
 }
 
 .catalogo-header__sup {
@@ -20,7 +20,7 @@
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #999;
+  color: var(--gris-claro);
   margin-bottom: var(--gap-xs);
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@
   display: inline-block;
   width: 24px;
   height: 1px;
-  background: #ccc;
+  background: var(--gris-medio);
 }
 
 .catalogo-header__titulo {
@@ -40,7 +40,7 @@
   font-size: clamp(2.4rem, 6vw, var(--text-4xl));
   font-weight: 300;
   font-style: italic;
-  color: var(--negro);
+  color: var(--blanco);
   line-height: 1.0;
   margin-bottom: var(--gap-sm);
 }
@@ -49,15 +49,15 @@
   font-family: var(--fuente-cuerpo);
   font-size: var(--text-md);
   font-weight: 300;
-  color: #777;
+  color: var(--gris-claro);
   max-width: 480px;
 }
 
 /*Filtros */
 .filtros {
   padding: var(--gap-md) 0;
-  background: var(--blanco-puro);
-  border-bottom: 1px solid #e8e8e4;
+  background: var(--negro);
+  border-bottom: 1px solid var(--gris-borde);
   position: sticky;
   top: var(--navbar-altura);
   z-index: 10;
@@ -82,9 +82,9 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #777;
+  color: var(--gris-claro);
   padding: 6px 14px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--gris-borde);
   border-radius: 2px;
   background: transparent;
   cursor: pointer;
@@ -94,21 +94,21 @@
 }
 
 .filtros__btn:hover {
-  color: var(--negro);
-  border-color: #aaa;
+  color: var(--blanco);
+  border-color: var(--gris-medio);
 }
 
 .filtros__btn.activo {
-  background: var(--negro);
-  color: var(--blanco);
-  border-color: var(--negro);
+  background: var(--blanco);
+  color: var(--negro);
+  border-color: var(--blanco);
 }
 
 .filtros__contador {
   font-family: var(--fuente-cuerpo);
   font-size: var(--text-xs);
   font-weight: 300;
-  color: #aaa;
+  color: var(--gris-medio);
   letter-spacing: 0.06em;
   white-space: nowrap;
 }
@@ -116,7 +116,7 @@
 /*Grid del catálogo*/
 .catalogo {
   padding: var(--gap-xl) 0 calc(var(--gap-xl) * 1.5);
-  background: var(--blanco-puro);
+  background: var(--negro);
 }
 
 .catalogo__grid {
@@ -137,19 +137,19 @@
   }
 }
 
-/*Cards */
-
-/* Override: en catálogo las cards son sobre fondo blanco */
+/*Cards en el catálogo — sobre fondo oscuro */
+/* Las cards ya tienen colores claros por defecto en home.css,
+   así que aquí no hace falta override de texto */
 .pagina-clara .pelicula-card__titulo {
-  color: var(--negro);
+  color: var(--blanco);
 }
 
 .pagina-clara .pelicula-card__meta {
-  color: #888;
+  color: var(--gris-claro);
 }
 
 .pagina-clara .pelicula-card__enlace:hover .pelicula-card__titulo {
-  color: #444;
+  color: rgba(245, 243, 239, 0.7);
 }
 
 /* Badge de categoría encima del poster */
@@ -183,43 +183,12 @@
   font-family: var(--fuente-titulo);
   font-size: var(--text-xl);
   font-style: italic;
-  color: #bbb;
+  color: var(--gris-medio);
 }
 
-/*Footer variante clara */
-.footer--clara {
-  background: #f5f3ef;
-  border-top: 1px solid #e0ddd8;
-}
-
-.footer--clara .footer__logo-texto,
-.footer--clara .footer__descripcion,
-.footer--clara .footer__titulo-col,
-.footer--clara .footer__red,
-.footer--clara .footer__contacto-item {
-  color: #555;
-}
-
-.footer--clara .footer__logo-texto {
-  color: var(--negro);
-}
-
-.footer--clara .footer__red::before {
-  content: '↗';
-}
-
-.footer--clara .footer__red:hover {
-  color: var(--negro);
-}
-
-.footer--clara .footer__barra {
-  border-top-color: #ddd;
-}
-
-.footer--clara .footer__copyright,
-.footer--clara .footer__credito {
-  color: #aaa;
-}
+/*Footer variante oscura para el catálogo
+  (el catálogo ya es oscuro, así que usamos el footer estándar
+  de style.css — no hace falta .footer--clara aquí) */
 
 /* Responsive */
 @media (max-width: 1100px) {

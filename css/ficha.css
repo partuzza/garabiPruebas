@@ -1,7 +1,10 @@
-/* GARABI FILMS — ficha.css
-   Estilos de la página de ficha individual (pelicula o serie) */
+/* ============================================================
+   GARABI FILMS — ficha.css
+   Estilos de la página de ficha individual (película o serie)
+   Fondo oscuro cinematográfico
+   ============================================================ */
 
-/* Hero de la ficha*/
+/* ── Hero de la ficha ─────────────────────────────────────── */
 .ficha-hero {
   position: relative;
   height: 55vh;
@@ -25,7 +28,6 @@
   inset: 0;
 }
 
-/* Dudas sobre el efecto gradient, funciona en la parte inferior + ayuda en transicionar al apartado de abajo, pero oscurece demasiado a la propia imagen de fondo
 .ficha-hero__gradiente {
   position: absolute;
   inset: 0;
@@ -33,11 +35,10 @@
     to bottom,
     rgba(8, 8, 8, 0.15) 0%,
     rgba(8, 8, 8, 0.55) 60%,
-    rgba(8, 8, 8, 0.92) 100%
+    rgba(8, 8, 8, 0.97) 100%
   );
   z-index: 1;
-} 
-*/
+}
 
 .ficha-hero__contenido {
   position: relative;
@@ -48,7 +49,6 @@
   padding: 0 2.5rem var(--gap-lg);
 }
 
-/* Enlace de vuelta al catálogo */
 .ficha-hero__breadcrumb {
   margin-bottom: var(--gap-md);
 }
@@ -67,7 +67,6 @@
   color: var(--blanco);
 }
 
-/* Tipo y año encima del título */
 .ficha-hero__tipo {
   display: block;
   font-family: var(--fuente-cuerpo);
@@ -100,7 +99,7 @@
   color: rgba(245, 243, 239, 0.8);
 }
 
-/* Layout: columna principal + lateral */
+/* ── Cuerpo: layout de dos columnas ──────────────────────── */
 .ficha-cuerpo {
   display: grid;
   grid-template-columns: 1fr 300px;
@@ -108,11 +107,11 @@
   padding-top: var(--gap-xl);
   padding-bottom: calc(var(--gap-xl) * 1.5);
   align-items: start;
-  background: var(--blanco-puro);
-  color: var(--negro);
+  background: var(--negro);
+  color: var(--blanco);
 }
 
-/* Secciones */
+/* ── Secciones ────────────────────────────────────────────── */
 .ficha-seccion {
   margin-bottom: var(--gap-xl);
 }
@@ -127,36 +126,35 @@
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #999;
+  color: var(--gris-claro);
   margin-bottom: var(--gap-md);
   padding-bottom: var(--gap-xs);
-  border-bottom: 1px solid #e8e8e4;
+  border-bottom: 1px solid var(--gris-borde);
 }
 
 .ficha-seccion--lateral {
   margin-bottom: var(--gap-lg);
 }
 
-/* Sinopsis */
+/* ── Sinopsis ─────────────────────────────────────────────── */
 .ficha-sinopsis {
   font-family: var(--fuente-titulo);
   font-size: var(--text-lg);
   font-weight: 300;
   line-height: 1.75;
-  color: #333;
+  color: rgba(245, 243, 239, 0.8);
   max-width: 640px;
 }
 
 .ficha-sinopsis em {
   font-style: italic;
-  color: #111;
+  color: var(--blanco);
 }
 
-/* Lista de capítulos (específico de series) */
+/* ── Lista de capítulos (series) ──────────────────────────── */
 .capitulos-lista {
   display: flex;
   flex-direction: column;
-  gap: 0;
   max-width: 580px;
 }
 
@@ -165,11 +163,11 @@
   align-items: baseline;
   gap: var(--gap-md);
   padding: var(--gap-sm) 0;
-  border-bottom: 1px solid #f0ede8;
+  border-bottom: 1px solid var(--gris-borde);
 }
 
 .capitulos-item:first-child {
-  border-top: 1px solid #f0ede8;
+  border-top: 1px solid var(--gris-borde);
 }
 
 .capitulos-item__num {
@@ -177,7 +175,7 @@
   font-size: var(--text-xl);
   font-weight: 300;
   font-style: italic;
-  color: #ccc;
+  color: var(--gris-medio);
   min-width: 32px;
   line-height: 1;
 }
@@ -192,18 +190,18 @@
   font-family: var(--fuente-cuerpo);
   font-size: var(--text-md);
   font-weight: 400;
-  color: #222;
+  color: var(--blanco);
 }
 
 .capitulos-item__meta {
   font-family: var(--fuente-cuerpo);
   font-size: var(--text-xs);
   font-weight: 300;
-  color: #aaa;
+  color: var(--gris-claro);
   letter-spacing: 0.06em;
 }
 
-/* Lista de festivales */
+/* ── Lista de festivales ──────────────────────────────────── */
 .festivales-lista {
   display: flex;
   flex-direction: column;
@@ -214,12 +212,12 @@
   grid-template-columns: 110px 1fr;
   gap: var(--gap-sm);
   padding: var(--gap-sm) 0;
-  border-bottom: 1px solid #f0ede8;
+  border-bottom: 1px solid var(--gris-borde);
   align-items: baseline;
 }
 
 .festivales-item:first-child {
-  border-top: 1px solid #f0ede8;
+  border-top: 1px solid var(--gris-borde);
 }
 
 .festivales-item__pais {
@@ -228,18 +226,18 @@
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #aaa;
+  color: var(--gris-claro);
 }
 
 .festivales-item__nombre {
   font-family: var(--fuente-cuerpo);
   font-size: var(--text-sm);
   font-weight: 300;
-  color: #444;
+  color: rgba(245, 243, 239, 0.7);
   line-height: 1.5;
 }
 
-/* Galería */
+/* ── Galería ──────────────────────────────────────────────── */
 .galeria-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -264,7 +262,7 @@
   border-radius: 2px;
 }
 
-/* Vídeo embed */
+/* ── Vídeo embed ──────────────────────────────────────────── */
 .video-wrap {
   position: relative;
   width: 100%;
@@ -287,11 +285,11 @@
   font-family: var(--fuente-cuerpo);
   font-size: var(--text-xs);
   font-weight: 300;
-  color: #bbb;
+  color: var(--gris-claro);
   letter-spacing: 0.04em;
 }
 
-/* Ficha técnica */
+/* ── Ficha técnica ────────────────────────────────────────── */
 .ficha-tecnica {
   display: flex;
   flex-direction: column;
@@ -302,11 +300,11 @@
   grid-template-columns: 100px 1fr;
   gap: var(--gap-sm);
   padding: 8px 0;
-  border-bottom: 1px solid #f0ede8;
+  border-bottom: 1px solid var(--gris-borde);
 }
 
 .ficha-tecnica__fila:first-child {
-  border-top: 1px solid #f0ede8;
+  border-top: 1px solid var(--gris-borde);
 }
 
 .ficha-tecnica__etiqueta {
@@ -314,7 +312,7 @@
   font-size: var(--text-xs);
   font-weight: 500;
   letter-spacing: 0.06em;
-  color: #aaa;
+  color: var(--gris-claro);
   text-transform: uppercase;
 }
 
@@ -322,10 +320,10 @@
   font-family: var(--fuente-cuerpo);
   font-size: var(--text-sm);
   font-weight: 300;
-  color: #333;
+  color: rgba(245, 243, 239, 0.8);
 }
 
-/* Descargas */
+/* ── Descargas ────────────────────────────────────────────── */
 .descargas__grupo {
   margin-bottom: var(--gap-md);
 }
@@ -336,55 +334,33 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #bbb;
+  color: var(--gris-medio);
   margin-bottom: var(--gap-xs);
 }
 
-/* Botones de descarga en columna */
+/* Botones de descarga en columna — versión clara sobre fondo oscuro */
 .descargas .btn-descarga {
   display: flex;
   width: 100%;
   margin-bottom: var(--gap-xs);
   justify-content: flex-start;
+  color: rgba(245, 243, 239, 0.7);
+  border-color: var(--gris-borde);
 }
 
-/* Columna lateral fija al hacer scroll */
+.descargas .btn-descarga:hover {
+  background: var(--blanco);
+  color: var(--negro);
+  border-color: var(--blanco);
+}
+
+/* ── Columna lateral sticky ───────────────────────────────── */
 .ficha-lateral {
   position: sticky;
   top: calc(var(--navbar-altura) + var(--gap-md));
 }
 
-/* Footer variante clara */
-.footer--clara {
-  background: #f5f3ef;
-  border-top: 1px solid #e0ddd8;
-}
-
-.footer--clara .footer__logo-texto {
-  color: var(--negro);
-}
-
-.footer--clara .footer__descripcion,
-.footer--clara .footer__titulo-col,
-.footer--clara .footer__red,
-.footer--clara .footer__contacto-item {
-  color: #555;
-}
-
-.footer--clara .footer__red:hover {
-  color: var(--negro);
-}
-
-.footer--clara .footer__barra {
-  border-top-color: #ddd;
-}
-
-.footer--clara .footer__copyright,
-.footer--clara .footer__credito {
-  color: #aaa;
-}
-
-/* Responsive  */
+/* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 900px) {
   .ficha-cuerpo {
     grid-template-columns: 1fr;
@@ -416,10 +392,6 @@
 
   .festivales-item {
     grid-template-columns: 80px 1fr;
-  }
-
-  .capitulos-item {
-    gap: var(--gap-sm);
   }
 }
 
